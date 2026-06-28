@@ -1,8 +1,8 @@
-# MineLegends — Handoff
+# VeinLegends — Handoff
 
 **Date:** June 23, 2026
 **Status:** v0.1.0 (foundation complete)
-**Repo:** https://github.com/draycolix/minelegends
+**Repo:** https://github.com/draycolix/veinlegends
 **Live pages:** Pending deployment (Next.js build)
 
 ---
@@ -19,13 +19,13 @@
 - `docs/airdrop/AIRDROP_PLAN.md` (7.6KB) — 5 tiers, anti-sybil, Merkle
 
 ### 🔐 Smart Contract (6 files, Anchor + Rust)
-- `programs/minelegends/src/lib.rs` — 6 instructions
-- `programs/minelegends/src/state.rs` — 5 account types
-- `programs/minelegends/src/instructions.rs` — Account constraints
-- `programs/minelegends/src/constants.rs` — Tunables
-- `programs/minelegends/src/errors.rs` — Error codes
-- `programs/minelegends/Cargo.toml` — Rust deps
-- `tests/minelegends.ts` — Anchor integration tests
+- `programs/veinlegends/src/lib.rs` — 6 instructions
+- `programs/veinlegends/src/state.rs` — 5 account types
+- `programs/veinlegends/src/instructions.rs` — Account constraints
+- `programs/veinlegends/src/constants.rs` — Tunables
+- `programs/veinlegends/src/errors.rs` — Error codes
+- `programs/veinlegends/Cargo.toml` — Rust deps
+- `tests/veinlegends.ts` — Anchor integration tests
 
 ### 🌐 Web App (Next.js 14 + TypeScript + Tailwind)
 - `web/app/page.tsx` — Landing (8 sections)
@@ -37,7 +37,7 @@
 - `web/package.json` + `web/tsconfig.json` + `web/next.config.js` + `web/tailwind.config.ts` + `web/postcss.config.js`
 
 ### 🚀 Git
-- ✅ Repo: https://github.com/draycolix/minelegends
+- ✅ Repo: https://github.com/draycolix/veinlegends
 - ✅ Commit: 79dd1c4
 - ✅ 47 files pushed
 
@@ -70,7 +70,7 @@ anchor --version
 
 ### 2. Test smart contract locally
 ```bash
-cd ~/projects/minelegends
+cd ~/projects/veinlegends
 solana-keygen new -o ~/.config/solana/id.json
 solana airdrop 2 --url devnet
 anchor build
@@ -85,7 +85,7 @@ anchor deploy --provider.cluster devnet
 
 ### 4. Install + build web app
 ```bash
-cd ~/projects/minelegends/web
+cd ~/projects/veinlegends/web
 npm install
 npm run build  # verify production build works
 npm run dev    # http://localhost:3000
@@ -95,14 +95,14 @@ npm run dev    # http://localhost:3000
 
 ### 5. Deploy landing ke Vercel
 - Sign in ke vercel.com pakai GitHub
-- Import repo `draycolix/minelegends`
+- Import repo `draycolix/veinlegends`
 - Set root directory: `web`
 - Set env: `NEXT_PUBLIC_NETWORK=devnet`
 - Deploy
 - Note: Vercel otomatis detect Next.js
 
 ### 6. Create social accounts
-- Twitter/X: @minelegends (atau @draycolix_backup)
+- Twitter/X: @veinlegends (atau @draycolix_backup)
 - Discord: setup pakai struktur di `docs/marketing/discord/SERVER_STRUCTURE.md`
 - Telegram: opsional, untuk SEA community
 
@@ -117,7 +117,7 @@ npm run dev    # http://localhost:3000
 - [ ] Anchor build successful
 - [ ] Web app deployed ke Vercel
 - [ ] Twitter + Discord live
-- [ ] First thread: "Why I built MineLegends" (Day 1 content)
+- [ ] First thread: "Why I built VeinLegends" (Day 1 content)
 - [ ] Invite 10 friends ke Discord
 
 ---
@@ -155,7 +155,7 @@ npm run dev    # http://localhost:3000
 | Web app | 13 files, ~1,500 LOC |
 | Components | 9 React components |
 | GitHub commit | 79dd1c4 |
-| Repo URL | https://github.com/draycolix/minelegends |
+| Repo URL | https://github.com/draycolix/veinlegends |
 
 ---
 
@@ -181,12 +181,12 @@ npm run dev    # http://localhost:3000
 
 ### Day 4
 - [ ] Deploy landing ke Vercel
-- [ ] Buy domain `minelegends.xyz` (~$12)
+- [ ] Buy domain `veinlegends.xyz` (~$12)
 - [ ] Setup Cloudflare (gratis)
 - [ ] Connect domain ke Vercel
 
 ### Day 5
-- [ ] Create Twitter account @minelegends
+- [ ] Create Twitter account @veinlegends
 - [ ] Create Discord server pakai struktur di docs
 - [ ] Tweet Day 1 thread (sudah ada di CONTENT_CALENDAR.md)
 - [ ] Invite 10 friends

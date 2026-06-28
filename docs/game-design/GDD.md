@@ -1,4 +1,4 @@
-# MineLegends Game Design Document v1.0
+# VeinLegends Game Design Document v1.0
 
 **Last updated:** June 23, 2026
 **Genre:** Idle RPG + PvP Battle + Light Strategy
@@ -17,7 +17,7 @@ A **bite-sized Web3 RPG** that respects player time. Sessions of 5-15 minutes fe
 
 ## 2. Core Loop (One Sentence)
 
-> Mine $MNLG with skill → burn $MNLG for characters → battle others → win bigger $MNLG pools → repeat.
+> Mine $VEIN with skill → burn $VEIN for characters → battle others → win bigger $VEIN pools → repeat.
 
 ### 2.1 Atomic Loop (60 seconds)
 - Tap mine → earn micro-rewards
@@ -55,7 +55,7 @@ A **bite-sized Web3 RPG** that respects player time. Sessions of 5-15 minutes fe
 Mined per hour = Base × Character_Mining_Power × Player_Level_Modifier × Active_Bonus × Seasonal_Bonus
 ```
 
-- Base = 10 $MNLG/hour
+- Base = 10 $VEIN/hour
 - Character_Mining_Power = 1.0 to 5.0 (depends on class/level/rarity)
 - Player_Level_Modifier = 1 + (level × 0.05)
 - Active_Bonus = 1.5 if logged in within 24h
@@ -68,7 +68,7 @@ Mined per hour = Base × Character_Mining_Power × Player_Level_Modifier × Acti
 **Type:** Match-3 puzzle (Bejeweled-style)
 **Duration:** 60 seconds
 **Frequency:** Every 4 hours (4 attempts per day max)
-**Reward:** 10-50 $MNLG based on score
+**Reward:** 10-50 $VEIN based on score
 
 **Scoring:**
 - 3-match: 10 points
@@ -78,10 +78,10 @@ Mined per hour = Base × Character_Mining_Power × Player_Level_Modifier × Acti
 - Special gems: 3x multiplier
 
 **Reward tiers:**
-- 0-100 pts: 10 $MNLG
-- 100-200 pts: 20 $MNLG
-- 200-300 pts: 35 $MNLG
-- 300+ pts: 50 $MNLG
+- 0-100 pts: 10 $VEIN
+- 100-200 pts: 20 $VEIN
+- 200-300 pts: 35 $VEIN
+- 300+ pts: 50 $VEIN
 
 **Anti-bot:** Mouse movement tracking, time-on-task validation, captcha for high scores.
 
@@ -142,9 +142,9 @@ Mined per hour = Base × Character_Mining_Power × Player_Level_Modifier × Acti
 
 | Rarity | Supply % | Cost | Stat Multiplier | Special |
 |---|---|---|---|---|
-| Common | 60% | 1,000 $MNLG | 1.0x | None |
-| Rare | 30% | 10,000 $MNLG | 1.5x | 1 random ability |
-| Legendary | 10% | 100,000 $MNLG | 2.5x | 2 abilities + unique art |
+| Common | 60% | 1,000 $VEIN | 1.0x | None |
+| Rare | 30% | 10,000 $VEIN | 1.5x | 1 random ability |
+| Legendary | 10% | 100,000 $VEIN | 2.5x | 2 abilities + unique art |
 
 ### 4.3 Character Progression
 
@@ -154,9 +154,9 @@ Mined per hour = Base × Character_Mining_Power × Player_Level_Modifier × Acti
 - XP curve: 100 × level² (so level 50 = 250,000 XP)
 
 **Upgrade cost (per level):**
-- Common: 10 × level $MNLG (e.g., level 10 = 100 $MNLG)
-- Rare: 100 × level $MNLG
-- Legendary: 1,000 × level $MNLG
+- Common: 10 × level $VEIN (e.g., level 10 = 100 $VEIN)
+- Rare: 100 × level $VEIN
+- Legendary: 1,000 × level $VEIN
 
 **Burned:** 60% of upgrade cost
 
@@ -167,8 +167,8 @@ Mined per hour = Base × Character_Mining_Power × Player_Level_Modifier × Acti
 ### 4.4 Character Acquisition
 
 **Methods:**
-1. Buy from shop (burn $MNLG)
-2. Win from PvE lootbox (10 $MNLG per attempt)
+1. Buy from shop (burn $VEIN)
+2. Win from PvE lootbox (10 $VEIN per attempt)
 3. Achievement rewards
 4. Seasonal events
 5. Marketplace (secondary)
@@ -182,7 +182,7 @@ Mined per hour = Base × Character_Mining_Power × Player_Level_Modifier × Acti
 ### 5.1 PvP Arena (Auto-Battle)
 
 **Format:** 1v1, async (no real-time)
-**Stake:** 10-1000 $MNLG (choose tier)
+**Stake:** 10-1000 $VEIN (choose tier)
 **Matchmaking:** Similar stake tier, similar player level
 **Resolution:** Calculated in <5 seconds
 
@@ -203,14 +203,14 @@ Winner = highest score
 ### 5.2 PvE Dungeon
 
 **Format:** Solo, 5 difficulty levels
-**Stamina cost:** 10 $MNLG per attempt
+**Stamina cost:** 10 $VEIN per attempt
 **Boss HP:** Scales with difficulty
 **Damage:** Character's Battle Power
 
 **Rewards:**
 - Lootbox (Common to Legendary based on difficulty + luck)
 - XP for character
-- 10-100 $MNLG
+- 10-100 $VEIN
 
 **Lootbox contents:**
 - Common lootbox: 80% Common item, 15% Rare, 5% Legendary
@@ -220,20 +220,20 @@ Winner = highest score
 
 **Daily:**
 - 100 players, top 10 share pool
-- Entry: 10 $MNLG
-- Pool: 900 $MNLG (90% × 1000 total entries)
+- Entry: 10 $VEIN
+- Pool: 900 $VEIN (90% × 1000 total entries)
 - Top 3 split: 50%, 30%, 20%
 
 **Weekly:**
 - 500 players, top 50 share pool
-- Entry: 50 $MNLG
-- Pool: 22,500 $MNLG
+- Entry: 50 $VEIN
+- Pool: 22,500 $VEIN
 - Distribution: Top 3 (50%), Top 4-10 (30%), Top 11-50 (20%)
 
 **Monthly (Seasonal):**
 - 5000 players, top 500 share pool
-- Entry: 200 $MNLG
-- Pool: 800,000 $MNLG
+- Entry: 200 $VEIN
+- Pool: 800,000 $VEIN
 - Distribution: Top 3 (40%), Top 4-25 (35%), Top 26-500 (25%)
 
 **Burn:** 50% of all entry fees (deflationary)
@@ -247,7 +247,7 @@ Winner = highest score
 **XP sources:**
 - Battle wins: 50 XP
 - Battle losses: 10 XP
-- Mining (per 100 $MNLG mined): 5 XP
+- Mining (per 100 $VEIN mined): 5 XP
 - Quests: 100-1000 XP
 - Achievements: 500-5000 XP
 
@@ -260,18 +260,18 @@ Winner = highest score
 ### 6.2 Achievements (200+)
 
 **Categories:**
-- Mining: "First 1K $MNLG", "100K Club", "1M Club"
+- Mining: "First 1K $VEIN", "100K Club", "1M Club"
 - Battle: "First Win", "Win Streak 10", "Top 100"
 - Character: "Max Level Character", "5 Legendary Characters"
 - Social: "First Referral", "10 Referrals", "Guild Leader"
 - Special: "OG Player" (testnet), "Bug Reporter" (helped fix bug)
 
-**Rewards:** XP, $MNLG, character skins, titles.
+**Rewards:** XP, $VEIN, character skins, titles.
 
 ### 6.3 Season Pass (3 months per season)
 
 **Free tier:** Basic rewards, ~10% of total
-**Premium tier (10 $MNLG or $5):** Full rewards, 100% of total
+**Premium tier (10 $VEIN or $5):** Full rewards, 100% of total
 
 **Perks:**
 - Exclusive character skin
@@ -290,7 +290,7 @@ Winner = highest score
 - Guild leader can set focus (mining, battle, or balanced)
 - Guild chat
 - Guild wars (5v5)
-- Guild treasury (shared $MNLG pool)
+- Guild treasury (shared $VEIN pool)
 
 **Perks:**
 - Level 5: +5% mining for all members
@@ -301,7 +301,7 @@ Winner = highest score
 ### 7.2 Friends
 
 - Friend list (max 100)
-- Send/receive $MNLG (small amounts, like tipping)
+- Send/receive $VEIN (small amounts, like tipping)
 - Compare stats
 - Refer-a-friend bonus
 
@@ -316,7 +316,7 @@ Winner = highest score
 
 ## 8. Economy (In-Game)
 
-### 8.1 Sources of $MNLG
+### 8.1 Sources of $VEIN
 
 | Source | Rate | Notes |
 |---|---|---|
@@ -328,7 +328,7 @@ Winner = highest score
 | Achievements | 100-5000 per achievement | One-time |
 | Airdrops | Variable | Community rewards |
 
-### 8.2 Sinks of $MNLG
+### 8.2 Sinks of $VEIN
 
 | Sink | Amount | Burn % |
 |---|---|---|
@@ -351,13 +351,13 @@ Winner = highest score
 ### 9.1 First-Time User Experience (FTUE)
 
 1. **Wallet connect** or **Guest mode** (email signup for onboarding)
-2. **Tutorial: Mining** (2 minutes, earn first 10 $MNLG)
+2. **Tutorial: Mining** (2 minutes, earn first 10 $VEIN)
 3. **Tutorial: First character** (get free Common Miner)
-4. **Tutorial: First battle** (vs NPC, earn 50 $MNLG)
+4. **Tutorial: First battle** (vs NPC, earn 50 $VEIN)
 5. **Daily login streak** prompt
 6. **Referral prompt** (optional)
 
-**Goal:** Player has 100 $MNLG and 1 character within 5 minutes.
+**Goal:** Player has 100 $VEIN and 1 character within 5 minutes.
 
 ### 9.2 Main Dashboard
 
@@ -400,7 +400,7 @@ Winner = highest score
 - `game` program: PDAs for player, character, battle
 - `marketplace` program: listings, trades
 - `tournament` program: registration, payout
-- `staking` program: stake $MNLG for perks
+- `staking` program: stake $VEIN for perks
 
 ### 10.3 Backend (Optional, for off-chain state)
 
@@ -459,12 +459,12 @@ Winner = highest score
 - Sessions per day: target 2-3
 - Avg session length: target 5-15 min
 - Battles per session: target 1-3
-- $MNLG burned per user per day: target 5-20
+- $VEIN burned per user per day: target 5-20
 
 ### 12.3 Economic
 
-- Total $MNLG burned per month (Year 1): target 5M
-- Total $MNLG burned per month (Year 2): target 50M
+- Total $VEIN burned per month (Year 1): target 5M
+- Total $VEIN burned per month (Year 2): target 50M
 - Token velocity: target 60% (burned within 30 days)
 - Liquidity depth: target $500K+
 

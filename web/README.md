@@ -1,4 +1,4 @@
-# MineLegends Landing & Web App
+# VeinLegends Landing & Web App
 
 **Stack:** Next.js 14 · TypeScript · Tailwind CSS · Solana Wallet Adapter · Framer Motion
 
@@ -48,7 +48,7 @@ npm start
 
 ## Sections (Landing Page)
 
-1. **Hero** — Tagline, $MNLG ticker, CTA buttons
+1. **Hero** — Tagline, $VEIN ticker, CTA buttons
 2. **Stats** — 4 key metrics (Supply, Burn, Classes, MAU target)
 3. **Gameplay** — 6 feature cards (Mining, PvP, Tournaments, NFTs, Deflation, Guilds)
 4. **Characters** — 5 character classes with stat bars
@@ -71,7 +71,7 @@ npm start
 
 - [ ] Switch to mainnet-beta (NEXT_PUBLIC_NETWORK)
 - [ ] Use Helius RPC (NEXT_PUBLIC_RPC_URL)
-- [ ] Update $MNLG mint address (NEXT_PUBLIC_MNLG_MINT)
+- [ ] Update $VEIN mint address (NEXT_PUBLIC_MNLG_MINT)
 - [ ] Add real social links (X, Discord, Telegram)
 - [ ] Add OG image (public/og.png)
 - [ ] Add favicon

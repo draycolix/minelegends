@@ -1,12 +1,12 @@
-/// MineLegends Program Constants
+/// VeinLegends Program Constants
 /// 
 /// All magic numbers and tunables go here for easy adjustment.
 
-/// Maximum $MNLG that can be claimed per single transaction (anti-drain)
-pub const MAX_CLAIM_PER_TX: u64 = 10_000_000_000; // 10,000 $MNLG (with 9 decimals)
+/// Maximum $VEIN that can be claimed per single transaction (anti-drain)
+pub const MAX_CLAIM_PER_TX: u64 = 10_000_000_000; // 10,000 $VEIN (with 9 decimals)
 
-/// Base mining rate per hour (in $MNLG with 9 decimals)
-/// 10 $MNLG per hour = 10_000_000_000 raw
+/// Base mining rate per hour (in $VEIN with 9 decimals)
+/// 10 $VEIN per hour = 10_000_000_000 raw
 pub const BASE_MINING_RATE_PER_HOUR: u64 = 10_000_000_000;
 
 /// Minimum time between claim transactions (seconds)
@@ -17,7 +17,7 @@ pub const CLAIM_COOLDOWN_SECONDS: i64 = 3600; // 1 hour
 pub const MAX_OFFLINE_HOURS: i64 = 168;
 
 /// Slippage allowed between expected and actual claim (raw amount)
-pub const CLAIM_SLIPPAGE: u64 = 1_000_000_000; // 1 $MNLG
+pub const CLAIM_SLIPPAGE: u64 = 1_000_000_000; // 1 $VEIN
 
 /// Maximum character level
 pub const MAX_CHARACTER_LEVEL: u8 = 50;
@@ -39,7 +39,7 @@ pub const DAILY_MINT_LIMIT: u8 = 3;
 /// Token decimals (matches SPL standard)
 pub const TOKEN_DECIMALS: u8 = 9;
 
-/// Total supply cap (1B $MNLG with 9 decimals)
+/// Total supply cap (1B $VEIN with 9 decimals)
 pub const TOTAL_SUPPLY_CAP: u64 = 1_000_000_000_000_000_000;
 
 /// Initial circulating supply (8% = 80M)

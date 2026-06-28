@@ -1,4 +1,4 @@
-# $MNLG Tokenomics v1.0
+# $VEIN Tokenomics v1.0
 
 **Last updated:** June 23, 2026
 
@@ -8,7 +8,7 @@
 
 | Field | Value |
 |---|---|
-| Ticker | $MNLG |
+| Ticker | $VEIN |
 | Network | Solana (SPL Token) |
 | Decimals | 9 |
 | Total Supply | 1,000,000,000 (1B) |
@@ -70,21 +70,21 @@ Partners   █████  5%
 
 | Action | % Burned of Payment | Per-Use Cost (avg) | Annual Volume (est 50K MAU) |
 |---|---|---|---|
-| Buy character | 80% | 50,000 $MNLG | 25,000M (2.5B) burned |
-| Upgrade character | 60% | 100 $MNLG | 5,000M (500M) burned |
-| Tournament entry | 50% | 100 $MNLG | 1,000M (100M) burned |
-| Repair equipment | 100% | 5 $MNLG | 50M (5M) burned |
-| Fast-track queue | 100% | 50 $MNLG | 100M (10M) burned |
-| Custom name | 100% | 1,000 $MNLG | 10M (1M) burned |
-| Respec stats | 100% | 200 $MNLG | 20M (2M) burned |
+| Buy character | 80% | 50,000 $VEIN | 25,000M (2.5B) burned |
+| Upgrade character | 60% | 100 $VEIN | 5,000M (500M) burned |
+| Tournament entry | 50% | 100 $VEIN | 1,000M (100M) burned |
+| Repair equipment | 100% | 5 $VEIN | 50M (5M) burned |
+| Fast-track queue | 100% | 50 $VEIN | 100M (10M) burned |
+| Custom name | 100% | 1,000 $VEIN | 10M (1M) burned |
+| Respec stats | 100% | 200 $VEIN | 20M (2M) burned |
 | Marketplace fee | 100% | 2% of sale | 200M (20M) burned |
 
-**Total annual burn target (Year 1, 50K MAU):** ~3.15B $MNLG burned
+**Total annual burn target (Year 1, 50K MAU):** ~3.15B $VEIN burned
 
 **But:** Only a fraction of burned tokens come from the circulating supply; the rest is "virtual burn" (from newly mined tokens, not from supply reduction).
 
 **Net deflation calculation:**
-- Annual emission: 60M $MNLG (5M/month × 12)
+- Annual emission: 60M $VEIN (5M/month × 12)
 - Annual burn (real, from circulating): ~30% of emission
 - Net result: **Net deflationary** if 50K+ MAU
 
@@ -95,11 +95,11 @@ Net Supply Change = Monthly Emission - (Active Users × Avg Burn per User)
                   = 5M - (50,000 × X)
 ```
 
-If avg burn per user per month is **> 0.1 $MNLG**, the economy is deflationary.
+If avg burn per user per month is **> 0.1 $VEIN**, the economy is deflationary.
 
-At 50K MAU: needs 5M / 50K = 100 $MNLG burned per user per month = 3 $MNLG/day.
+At 50K MAU: needs 5M / 50K = 100 $VEIN burned per user per month = 3 $VEIN/day.
 
-**Estimated real burn per user per day:** 5-20 $MNLG (from tournament entries + repair + upgrades).
+**Estimated real burn per user per day:** 5-20 $VEIN (from tournament entries + repair + upgrades).
 
 **Conclusion:** Deflationary at 50K+ MAU. Likely inflationary below 10K MAU (bootstrap phase).
 
@@ -107,7 +107,7 @@ At 50K MAU: needs 5M / 50K = 100 $MNLG burned per user per month = 3 $MNLG/day.
 
 ## 5. Emission Schedule
 
-### 5.1 Mining Pool (35% of total = 350M $MNLG)
+### 5.1 Mining Pool (35% of total = 350M $VEIN)
 
 | Year | Monthly Emission | Notes |
 |---|---|---|
@@ -118,16 +118,16 @@ At 50K MAU: needs 5M / 50K = 100 $MNLG burned per user per month = 3 $MNLG/day.
 
 **Decay events:** Every 3 months, base mining rate drops 30% (smooth, not cliff). This forces early participation.
 
-### 5.2 Tournament Rewards (3% of treasury allocation, 60M $MNLG)
+### 5.2 Tournament Rewards (3% of treasury allocation, 60M $VEIN)
 
 - Released quarterly, 15M per quarter
 - Distributed: 60% to top 3, 30% to top 10, 10% to top 100
 - Reset each season
 
-### 5.3 Airdrops (5% of community allocation, 17.5M $MNLG)
+### 5.3 Airdrops (5% of community allocation, 17.5M $VEIN)
 
-- Testnet users: 10,000 $MNLG per active wallet (subject to anti-sybil)
-- Community contributors: 1,000-50,000 $MNLG based on tier
+- Testnet users: 10,000 $VEIN per active wallet (subject to anti-sybil)
+- Community contributors: 1,000-50,000 $VEIN based on tier
 - Marketing campaigns: variable, capped at 5% of total
 
 ---
@@ -136,7 +136,7 @@ At 50K MAU: needs 5M / 50K = 100 $MNLG burned per user per month = 3 $MNLG/day.
 
 ### 6.1 Initial Liquidity (Month 5, TGE)
 
-- **Source A:** 10% of supply (100M $MNLG)
+- **Source A:** 10% of supply (100M $VEIN)
 - **Source B:** User-contributed SOL (~$50K-100K from community)
 - **Total initial liquidity:** $200K-500K equivalent
 
@@ -147,17 +147,17 @@ At 50K MAU: needs 5M / 50K = 100 $MNLG burned per user per month = 3 $MNLG/day.
 
 ### 6.2 Post-Launch Liquidity Management
 
-- 30% of in-game revenue → buy $MNLG from market → add to LP
+- 30% of in-game revenue → buy $VEIN from market → add to LP
 - Treasury can add liquidity during low-volume periods
-- Burn 50% of buyback $MNLG, keep 50% in LP
+- Burn 50% of buyback $VEIN, keep 50% in LP
 
 ---
 
 ## 7. Treasury Management
 
-**Treasury holdings:** 200M $MNLG (20% of supply)
+**Treasury holdings:** 200M $VEIN (20% of supply)
 
-**Vesting:** 12-month cliff, then 48-month linear (5M $MNLG per month starting month 13)
+**Vesting:** 12-month cliff, then 48-month linear (5M $VEIN per month starting month 13)
 
 **Spending categories (DAO voted):**
 - Development: 40% (audits, contractors, tools)
@@ -172,9 +172,9 @@ At 50K MAU: needs 5M / 50K = 100 $MNLG burned per user per month = 3 $MNLG/day.
 
 ## 8. Governance
 
-**Voting power:** 1 $MNLG = 1 vote (or quadratic option for anti-whale)
+**Voting power:** 1 $VEIN = 1 vote (or quadratic option for anti-whale)
 
-**Proposal threshold:** 100,000 $MNLG (to prevent spam)
+**Proposal threshold:** 100,000 $VEIN (to prevent spam)
 
 **Quorum:** 4% of circulating supply
 
@@ -223,8 +223,8 @@ To prevent whale dominance:
 ### 10.2 Buyback-and-Burn Trigger
 
 Monthly revenue > $50K → trigger buyback-and-burn:
-- Buy $MNLG from DEX up to 30% of monthly revenue
-- Send 100% of bought $MNLG to burn address
+- Buy $VEIN from DEX up to 30% of monthly revenue
+- Send 100% of bought $VEIN to burn address
 
 **Target:** $1M+ burned via buyback in Year 1 (if successful).
 
@@ -239,7 +239,7 @@ Monthly revenue > $50K → trigger buyback-and-burn:
 
 ## 11. Comparison to Existing Models
 
-| Project | Model | Inflation Risk | MineLegends Advantage |
+| Project | Model | Inflation Risk | VeinLegends Advantage |
 |---|---|---|---|
 | Notcoin | Tap only | High (35M users) | Skill-based + battle depth |
 | Hamster Kombat | Tap + simple game | High (300M users) | True deflationary + NFT roster |
@@ -251,6 +251,6 @@ Monthly revenue > $50K → trigger buyback-and-burn:
 
 ## 12. Conclusion
 
-$MNLG is designed to be a **deflationary game utility token** with multiple burn sinks, governance, and treasury backing. The model is intentionally conservative to survive market downturns and provide a sustainable foundation for years, not months.
+$VEIN is designed to be a **deflationary game utility token** with multiple burn sinks, governance, and treasury backing. The model is intentionally conservative to survive market downturns and provide a sustainable foundation for years, not months.
 
 The key differentiator: **MNLG is needed for the game to function**, not just for speculation. This creates intrinsic demand independent of market sentiment.

@@ -5,8 +5,8 @@ pub struct GameState {
     pub admin: Pubkey,                    // 32
     pub total_players: u64,               // 8
     pub total_characters_minted: u64,     // 8
-    pub total_burned: u64,                // 8 - in raw $MNLG
-    pub total_mined: u64,                 // 8 - in raw $MNLG
+    pub total_burned: u64,                // 8 - in raw $VEIN
+    pub total_mined: u64,                 // 8 - in raw $VEIN
     pub mint_authority_bump: u8,          // 1
     pub pool_authority_bump: u8,          // 1
     pub bump: u8,                         // 1

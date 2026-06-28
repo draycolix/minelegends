@@ -1,4 +1,4 @@
-# MineLegends 6-Month Roadmap
+# VeinLegends 6-Month Roadmap
 
 **Last updated:** June 23, 2026
 **Target TGE (Token Generation Event):** Q4 2026 (Month 5)
@@ -55,7 +55,7 @@
 ### Week 5-6 (Aug 1-14): Public Testnet Launch
 - [ ] Deploy to public devnet (anyone can play)
 - [ ] Invite 100 alpha testers from X/Discord waitlist
-- [ ] Airdrop test $MNLG (no real value, just for testing)
+- [ ] Airdrop test $VEIN (no real value, just for testing)
 - [ ] Discord server live (invite-only)
 - [ ] Daily check-ins with testers
 
@@ -91,7 +91,7 @@
 - [ ] Guild system v1
 - [ ] Season pass v1
 - [ ] Mobile-responsive improvements
-- [ ] Staking v1 (lock $MNLG for perks)
+- [ ] Staking v1 (lock $VEIN for perks)
 - [ ] Performance: 10K concurrent users
 
 **Deliverables:**
@@ -146,14 +146,14 @@
 
 ### Week 19-20 (Nov 15-30): Public Launch
 - [ ] Mainnet game fully live (battles, mining, marketplace)
-- [ ] Airdrop to testnet participants (10K $MNLG per active wallet)
+- [ ] Airdrop to testnet participants (10K $VEIN per active wallet)
 - [ ] Public liquidity unlocked
 - [ ] Raydium trading live
 - [ ] Jupiter aggregator live
 - [ ] Customer support ramp up
 
 **Deliverables:**
-- $MNLG trading live on DEX
+- $VEIN trading live on DEX
 - 50K+ registered users (combined testnet + new)
 - 10K+ MAU
 - $1M+ liquidity
@@ -274,4 +274,4 @@ Buffer built into each phase (4 weeks per major phase, not 4-5).
 
 ## Closing Note
 
-This 6-month roadmap is **aggressive but achievable** for a solo dev with focused execution. The key is: build the product first (Months 1-3), then market and fund (Months 4-6). Most Web3 games fail because they market before they have a product. MineLegends is the opposite: ship first, talk later.
+This 6-month roadmap is **aggressive but achievable** for a solo dev with focused execution. The key is: build the product first (Months 1-3), then market and fund (Months 4-6). Most Web3 games fail because they market before they have a product. VeinLegends is the opposite: ship first, talk later.

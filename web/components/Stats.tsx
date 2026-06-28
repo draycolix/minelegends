@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { label: 'Total Supply', value: '1B', sub: '$MNLG tokens' },
+  { label: 'Total Supply', value: '1B', sub: '$VEIN tokens' },
   { label: 'Burn Rate', value: '60%', sub: 'avg per action' },
   { label: 'Character Classes', value: '5', sub: 'unique abilities' },
   { label: 'Target MAU', value: '100K', sub: 'Year 1' },

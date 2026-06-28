@@ -1,17 +1,17 @@
-# MineLegends Airdrop Plan
+# VeinLegends Airdrop Plan
 
-**Total allocation:** 5% of community rewards (17,500,000 $MNLG)
+**Total allocation:** 5% of community rewards (17,500,000 $VEIN)
 **Distribution target:** 50,000 wallets
-**Average per wallet:** 350 $MNLG (with tier multipliers)
+**Average per wallet:** 350 $VEIN (with tier multipliers)
 **Timeline:** Testnet snapshot (Month 3) → Mainnet distribution (Month 5)
 
 ---
 
 ## Airdrop Structure
 
-### Tier 1: Testnet Heroes (60% = 10.5M $MNLG)
+### Tier 1: Testnet Heroes (60% = 10.5M $VEIN)
 **For:** Active testnet players (Month 2-3)
-**Allocation:** 210 $MNLG base + bonuses
+**Allocation:** 210 $VEIN base + bonuses
 **Wallet count:** ~10,000
 **Criteria:**
 - Connected Solana wallet
@@ -25,40 +25,40 @@
 - +200% for finding critical bugs (verified)
 - +300% for first 100 players (OG bonus)
 
-### Tier 2: Community Builders (15% = 2.625M $MNLG)
+### Tier 2: Community Builders (15% = 2.625M $VEIN)
 **For:** Discord moderators, content creators, KOLs
-**Allocation:** 1,000-50,000 $MNLG per contributor
+**Allocation:** 1,000-50,000 $VEIN per contributor
 **Wallet count:** ~200
 **Criteria:**
 - 30+ days active in Discord
 - 100+ messages or 10+ quality posts
 - Community-vouched (mod/admin nomination)
 
-### Tier 3: KOL & Partners (15% = 2.625M $MNLG)
+### Tier 3: KOL & Partners (15% = 2.625M $VEIN)
 **For:** Influencers, gaming guilds, partner projects
-**Allocation:** 5,000-100,000 $MNLG
+**Allocation:** 5,000-100,000 $VEIN
 **Wallet count:** ~30
 **Criteria:**
-- Promoted MineLegends (thread, video, mention)
+- Promoted VeinLegends (thread, video, mention)
 - Minimum 10K reach
 - Genuine engagement (not paid spam)
 - 6-month vesting (claim monthly)
 
-### Tier 4: Bug Bounty (5% = 875K $MNLG)
+### Tier 4: Bug Bounty (5% = 875K $VEIN)
 **For:** Security researchers, bug reporters
 **Allocation:** Based on severity
 **Wallet count:** ~50
 
 | Severity | Reward | Examples |
 |---|---|---|
-| Critical | 50,000 $MNLG | Drain contract, mint exploit |
-| High | 10,000 $MNLG | Bypass burn, double spend |
-| Medium | 2,000 $MNLG | Frontend XSS, broken state |
-| Low | 500 $MNLG | UI bugs, typos |
+| Critical | 50,000 $VEIN | Drain contract, mint exploit |
+| High | 10,000 $VEIN | Bypass burn, double spend |
+| Medium | 2,000 $VEIN | Frontend XSS, broken state |
+| Low | 500 $VEIN | UI bugs, typos |
 
-### Tier 5: Retroactive (5% = 875K $MNLG)
+### Tier 5: Retroactive (5% = 875K $VEIN)
 **For:** Early GitHub contributors, design feedback
-**Allocation:** 500-10,000 $MNLG
+**Allocation:** 500-10,000 $VEIN
 **Wallet count:** ~50
 
 ---
@@ -82,7 +82,7 @@
 - **Behavioral:** Flag if mining pattern too regular (bot-like)
 
 ### Economic Anti-Sybil
-- **Stake requirement:** Must hold 100+ $MNLG to claim (dust attack prevention)
+- **Stake requirement:** Must hold 100+ $VEIN to claim (dust attack prevention)
 - **Vesting:** 50% unlocked at TGE, 50% vested over 6 months
 - **Activity decay:** Unclaimed after 12 months = sent to treasury
 
@@ -90,7 +90,7 @@
 - Community can report sybils via #sybil-report
 - 3+ reports = automatic review
 - 50% slash if confirmed sybil
-- Appeals via DAO vote (if >100K $MNLG)
+- Appeals via DAO vote (if >100K $VEIN)
 
 ---
 
@@ -146,7 +146,7 @@ pub fn claim_airdrop(
     // Verify merkle proof
     // Check leaf matches claimed wallet
     // Check not already claimed
-    // Transfer $MNLG to user
+    // Transfer $VEIN to user
     // Mark as claimed
 }
 ```
@@ -162,12 +162,12 @@ pub fn claim_airdrop(
 ## Claim Flow
 
 ### Step 1: User checks eligibility
-- Visit https://minelegends.xyz/airdrop
+- Visit https://veinlegends.xyz/airdrop
 - Connect wallet
-- If eligible, show "Claim X $MNLG"
+- If eligible, show "Claim X $VEIN"
 
 ### Step 2: Sign message (anti-bot)
-- Sign "I claim MineLegends airdrop for {wallet}"
+- Sign "I claim VeinLegends airdrop for {wallet}"
 - Bot verification
 - 1-time per wallet
 
@@ -176,8 +176,8 @@ pub fn claim_airdrop(
 - Pays gas (~0.001 SOL)
 - 50% unlocked, 50% vesting
 
-### Step 4: Optional - Stake $MNLG
-- Recommended: stake 100+ $MNLG to keep anti-sybil
+### Step 4: Optional - Stake $VEIN
+- Recommended: stake 100+ $VEIN to keep anti-sybil
 - Earn 5-10% APY
 - Vote in governance
 
@@ -205,10 +205,10 @@ pub fn claim_airdrop(
 ## Risk Mitigation
 
 ### Risk: Sybil attacks
-**Mitigation:** 2-of-3 social verification, IP/device fingerprinting, 100 $MNLG stake requirement
+**Mitigation:** 2-of-3 social verification, IP/device fingerprinting, 100 $VEIN stake requirement
 
 ### Risk: Dust attack
-**Mitigation:** Minimum claim 100 $MNLG, gas cost > dust value
+**Mitigation:** Minimum claim 100 $VEIN, gas cost > dust value
 
 ### Risk: Bot farming
 **Mitigation:** Behavioral analysis, captcha, time-on-task
@@ -267,7 +267,7 @@ For claims >$1,000 equivalent (at TGE price):
 A: End of Month 3 (testnet beta end)
 
 **Q: How much will I get?**
-A: Base 210 $MNLG, up to 2,000+ $MNLG with bonuses
+A: Base 210 $VEIN, up to 2,000+ $VEIN with bonuses
 
 **Q: Do I need KYC?**
 A: Only if claiming >$1,000 equivalent
@@ -288,4 +288,4 @@ A: 50% slash, DAO can review
 
 - Airdrop questions: #airdrop-faq in Discord
 - Bug reports: #sybil-report
-- Appeals: airdrop@minelegends.xyz (after mainnet)
+- Appeals: airdrop@veinlegends.xyz (after mainnet)

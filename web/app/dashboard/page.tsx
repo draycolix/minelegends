@@ -1,18 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { useWalletConnection, WalletContextProvider } from '@/lib/wallet-provider';
-import { getPlayerPDA, connection, fromRawAmount, toRawAmount, network } from '@/lib/program';
-import { LAMPORTS_PER_SOL, PublicKey } from '@solana/web3.js';
+import { useWalletConnection } from '@/lib/wallet-provider';
+import { connection, network, PROGRAM_ID } from '@/lib/program';
 import { motion } from 'framer-motion';
+import { Transaction, SystemProgram, PublicKey } from '@solana/web3.js';
 
 function DashboardInner() {
   const wallet = useWalletConnection();
   const [balance, setBalance] = useState<number>(0);
-  const [mnlgBalance, setMnlgBalance] = useState<number>(0);
-  const [lastClaim, setLastClaim] = useState<Date | null>(null);
+  const [veinBalance, setVeinBalance] = useState<number>(0);
   const [mounted, setMounted] = useState(false);
+  const [initialized, setInitialized] = useState(false);
+  const [txSig, setTxSig] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -22,14 +24,69 @@ function DashboardInner() {
     if (!wallet.connected || !wallet.publicKey) return;
     const fetchBalance = async () => {
       const bal = await connection.getBalance(wallet.publicKey!);
-      setBalance(bal / LAMPORTS_PER_SOL);
+      setBalance(bal);
     };
     fetchBalance();
     const interval = setInterval(fetchBalance, 30000);
     return () => clearInterval(interval);
   }, [wallet.connected, wallet.publicKey]);
 
+  // Check if program is initialized
+  useEffect(() => {
+    if (!wallet.connected) return;
+    const checkInit = async () => {
+      try {
+        const acc = await connection.getAccountInfo(PROGRAM_ID);
+        setInitialized(acc !== null);
+      } catch {
+        setInitialized(false);
+      }
+    };
+    checkInit();
+  }, [wallet.connected]);
+
+  // Initialize program on-chain
+  const handleInit = useCallback(async () => {
+    if (!wallet.publicKey || !wallet.signTransaction) return;
+    setLoading(true);
+    try {
+      const { blockhash } = await connection.getLatestBlockhash();
+
+      // Create instruction: discriminator for "initialize"
+      const crypto = await import('crypto');
+      const disc = crypto.createHash('sha256').update('global:initialize').digest().slice(0, 8);
+
+      const keys: { pubkey: PublicKey; isSigner: boolean; isWritable: boolean }[] = [
+        { pubkey: wallet.publicKey, isSigner: true, isWritable: true },
+        { pubkey: PROGRAM_ID, isSigner: false, isWritable: false },
+        { pubkey: SystemProgram.programId, isSigner: false, isWritable: false },
+      ];
+
+      const tx = new Transaction().add({
+        keys,
+        programId: PROGRAM_ID,
+        data: Buffer.from([0, ...disc]),
+      });
+
+      tx.recentBlockhash = blockhash;
+      tx.feePayer = wallet.publicKey;
+
+      const signed = await wallet.signTransaction(tx);
+      const sig = await connection.sendRawTransaction(signed.serialize());
+      await connection.confirmTransaction(sig, 'confirmed');
+
+      setTxSig(sig);
+      setInitialized(true);
+    } catch (err: any) {
+      console.error('Init failed:', err.message || err);
+    } finally {
+      setLoading(false);
+    }
+  }, [wallet.publicKey, wallet.signTransaction]);
+
   if (!mounted) return null;
+
+  const solDisplay = (balance / 1e9).toFixed(4);
 
   if (!wallet.connected) {
     return (
@@ -39,14 +96,14 @@ function DashboardInner() {
           animate={{ opacity: 1, y: 0 }}
           className="glass rounded-3xl p-12 text-center max-w-md"
         >
-          <div className="text-6xl mb-6">⛏</div>
-          <h1 className="font-display text-3xl font-bold mb-4">Welcome, Miner</h1>
+          <div className="text-6xl mb-6">🩸</div>
+          <h1 className="font-display text-3xl font-bold mb-4">Welcome, Veinwalker</h1>
           <p className="text-dark-200 mb-8">
-            Connect your Solana wallet to start mining, minting characters, and battling other players.
+            Connect your Solana wallet to initiate the VeinLegends program, mint characters, and battle for $VEIN.
           </p>
           <WalletMultiButton className="!bg-gradient-to-r !from-primary-500 !to-primary-600 !text-dark-900 !font-bold !rounded-xl !px-8 !py-4" />
           <p className="text-xs text-dark-400 mt-4">
-            Testnet preview. No real funds required. We're on devnet.
+            Devnet preview. No real funds required.
           </p>
         </motion.div>
       </div>
@@ -59,19 +116,48 @@ function DashboardInner() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
-            <h1 className="font-display text-3xl font-bold">Mining Dashboard</h1>
+            <h1 className="font-display text-3xl font-bold">🩸 VeinLegends Dashboard</h1>
             <p className="text-sm text-dark-300 mt-1">
               {wallet.publicKey?.toBase58().slice(0, 8)}...{wallet.publicKey?.toBase58().slice(-8)}
+              {' · '}
+              <span className="text-primary-400">{network}</span>
             </p>
           </div>
           <WalletMultiButton />
         </div>
 
+        {/* Init button — shown if program not initialized */}
+        {!initialized && (
+          <div className="glass rounded-2xl p-6 mb-8 border border-primary-500/30">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <h3 className="font-display font-bold text-lg">🚀 Program Not Initialized</h3>
+                <p className="text-sm text-dark-300">
+                  One-time transaction to initialize the VeinLegends state on-chain.
+                  Costs ~0.001 SOL.
+                </p>
+              </div>
+              <button
+                onClick={handleInit}
+                disabled={loading}
+                className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-dark-900 font-bold rounded-xl hover:from-primary-400 hover:to-primary-500 transition-all disabled:opacity-50 shadow-lg"
+              >
+                {loading ? '⏳ Initializing...' : '🩸 Initialize Program'}
+              </button>
+            </div>
+            {txSig && (
+              <p className="text-xs text-primary-400 mt-3 font-mono">
+                ✅ Tx: <a href={`https://explorer.solana.com/tx/${txSig}?cluster=devnet`} target="_blank" className="underline">{txSig.slice(0, 16)}...{txSig.slice(-16)}</a>
+              </p>
+            )}
+          </div>
+        )}
+
         {/* Stats grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <StatCard label="SOL Balance" value={balance.toFixed(4)} icon="◎" />
-          <StatCard label="$MNLG Balance" value={mnlgBalance.toFixed(2)} icon="⛏" highlight />
-          <StatCard label="Mining Rate" value="10/hr" icon="⚡" />
+          <StatCard label="SOL Balance" value={solDisplay} icon="◎" />
+          <StatCard label="$VEIN Balance" value={veinBalance.toFixed(2)} icon="🩸" highlight />
+          <StatCard label="Program" value={initialized ? 'Initialized' : 'Not Init'} icon={initialized ? '✅' : '⚠️'} />
           <StatCard label="Characters" value="0" icon="⚔" />
         </div>
 
@@ -80,12 +166,12 @@ function DashboardInner() {
           <div className="glass rounded-2xl p-6">
             <h2 className="font-display text-xl font-bold mb-4">⛏ Idle Mining</h2>
             <p className="text-sm text-dark-300 mb-4">
-              Your characters auto-mine $MNLG while offline. Cap: 168 hours (1 week).
+              Your characters auto-mine $VEIN while offline. Cap: 168 hours (1 week).
             </p>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-dark-300">Pending</span>
-                <span className="font-mono text-primary-400">0.00 $MNLG</span>
+                <span className="font-mono text-primary-400">0.00 $VEIN</span>
               </div>
               <div className="h-2 bg-dark-700 rounded-full overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-primary-500 to-primary-400 w-1/3" />
@@ -121,7 +207,7 @@ function DashboardInner() {
         <div className="glass rounded-2xl p-6">
           <h2 className="font-display text-xl font-bold mb-4">⚔ Character Shop</h2>
           <p className="text-sm text-dark-300 mb-6">
-            Burn $MNLG to mint character NFTs. 80% of cost is burned permanently.
+            Burn $VEIN to mint character NFTs. 80% of cost is burned permanently.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {['Miner', 'Warrior', 'Mage', 'Engineer', 'Alchemist'].map((cls) => (
@@ -130,7 +216,7 @@ function DashboardInner() {
                   {cls === 'Miner' ? '⛏' : cls === 'Warrior' ? '⚔' : cls === 'Mage' ? '🔮' : cls === 'Engineer' ? '⚙' : '🧪'}
                 </div>
                 <h3 className="font-bold mb-1">{cls}</h3>
-                <p className="text-xs text-dark-400 mb-3">Common · 1,000 $MNLG</p>
+                <p className="text-xs text-dark-400 mb-3">Common · 1,000 $VEIN</p>
                 <button
                   disabled
                   className="w-full px-3 py-2 bg-dark-700 text-dark-300 text-sm rounded-lg disabled:opacity-50"
@@ -161,9 +247,5 @@ function StatCard({ label, value, icon, highlight }: { label: string; value: str
 }
 
 export default function DashboardPage() {
-  return (
-    <WalletContextProvider>
-      <DashboardInner />
-    </WalletContextProvider>
-  );
+  return <DashboardInner />;
 }

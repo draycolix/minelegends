@@ -1,12 +1,12 @@
-import { AnchorProvider, Program, web3, BN } from '@project-serum/anchor';
+import { AnchorProvider, Program, web3, BN } from '@coral-xyz/anchor';
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 
-// Program ID from Anchor.toml
-export const PROGRAM_ID = new PublicKey('MNLG1111111111111111111111111111111111111111');
+// 🩸 VeinLegends — deployed on Solana Devnet
+export const PROGRAM_ID = new PublicKey('F4BZLJ42GzmBPv8iCqQ5kiNa3VVREjABdYadKCGDV9Y8');
 
-// Token mint - to be set after deployment
-export const MNLG_MINT = new PublicKey(
-  process.env.NEXT_PUBLIC_MNLG_MINT || 'MNLG1111111111111111111111111111111111111111'
+// Token mint — to be created after program init
+export const VEIN_MINT = new PublicKey(
+  process.env.NEXT_PUBLIC_VEIN_MINT || '11111111111111111111111111111111'
 );
 
 // Seeds (must match program/src/constants.rs)
@@ -66,7 +66,7 @@ export const fromRawAmount = (raw: BN | number | bigint): number => {
   return n / 10 ** TOKEN_DECIMALS;
 };
 
-// Character costs (in $MNLG, human-readable)
+// Character costs (in $VEIN, human-readable)
 export const CHARACTER_COSTS = {
   common: { miner: 1000, warrior: 1500, mage: 1200, engineer: 1100, alchemist: 1100 },
   rare: { miner: 10000, warrior: 15000, mage: 12000, engineer: 11000, alchemist: 11000 },

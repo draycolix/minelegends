@@ -1,23 +1,24 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { WalletContextProvider } from '@/lib/wallet-provider';
 
 export const metadata: Metadata = {
-  title: 'MineLegends ($MNLG) — Mine. Build. Battle. Earn.',
+  title: 'VeinLegends ($VEIN) — Mine. Build. Battle. Earn.',
   description:
-    'A Web3 idle RPG on Solana. Mine the $MNLG token with skill, burn to mint legendary character NFTs, and battle other players for token prizes.',
-  keywords: ['Solana', 'Web3', 'Game', 'NFT', 'Mining', 'Token', 'MNLG', 'MineLegends'],
-  authors: [{ name: 'MineLegends' }],
+    'A Web3 idle RPG on Solana. Mine the $VEIN token with skill, burn to mint legendary character NFTs, and battle other players for token prizes.',
+  keywords: ['Solana', 'Web3', 'Game', 'NFT', 'Mining', 'Token', '$VEIN', 'VeinLegends'],
+  authors: [{ name: 'VeinLegends' }],
   openGraph: {
-    title: 'MineLegends ($MNLG)',
+    title: 'VeinLegends ($VEIN)',
     description: 'A Web3 idle RPG on Solana. Mine. Build. Battle. Earn.',
     type: 'website',
     images: ['/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MineLegends ($MNLG)',
+    title: 'VeinLegends ($VEIN)',
     description: 'A Web3 idle RPG on Solana. Mine. Build. Battle. Earn.',
-    creator: '@minelegends',
+    creator: '@veinlegends',
   },
 };
 
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans antialiased bg-dark-900 text-dark-50">{children}</body>
+      <body className="font-sans antialiased bg-dark-900 text-dark-50">
+        <WalletContextProvider>{children}</WalletContextProvider>
+      </body>
     </html>
   );
 }

@@ -36,26 +36,26 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-dark-300">
               <li><a href="#tokenomics" className="hover:text-primary-400">Tokenomics</a></li>
               <li><a href="/docs/WHITEPAPER.md" className="hover:text-primary-400">Whitepaper</a></li>
-              <li><a href="https://github.com/draycolix/minelegends" className="hover:text-primary-400">GitHub</a></li>
+              <li><a href="https://github.com/draycolix/veinlegends" className="hover:text-primary-400">GitHub</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-dark-100 mb-3">Community</h4>
             <ul className="space-y-2 text-sm text-dark-300">
-              <li><a href="https://x.com/minelegends" className="hover:text-primary-400">Twitter / X</a></li>
-              <li><a href="https://discord.gg/minelegends" className="hover:text-primary-400">Discord</a></li>
-              <li><a href="https://t.me/minelegends" className="hover:text-primary-400">Telegram</a></li>
+              <li><a href="https://x.com/veinlegends" className="hover:text-primary-400">Twitter / X</a></li>
+              <li><a href="https://discord.gg/veinlegends" className="hover:text-primary-400">Discord</a></li>
+              <li><a href="https://t.me/veinlegends" className="hover:text-primary-400">Telegram</a></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-dark-400">
-            © 2026 MineLegends. All rights reserved.
+            © 2026 VeinLegends. All rights reserved.
           </div>
           <div className="text-xs text-dark-500">
-            $MNLG is a utility token, not a security. Not financial advice. Game responsibly.
+            $VEIN is a utility token, not a security. Not financial advice. Game responsibly.
           </div>
         </div>
       </div>

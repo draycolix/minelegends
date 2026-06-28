@@ -1,6 +1,6 @@
-# MineLegends Discord Server Structure
+# VeinLegends Discord Server Structure
 
-**Server name:** MineLegends
+**Server name:** VeinLegends
 **Description:** "Mine. Build. Battle. Earn. ⛏ | Web3 idle RPG on Solana | Testnet live"
 **Region:** Singapore (closest to Indonesia + global)
 **Verification level:** Medium
@@ -16,7 +16,7 @@
 #roadmap                  → Current phase + what's next
 #whitepaper               → Link to docs, FAQ
 #faq                      → Common questions
-#team                     → Who's building MineLegends
+#team                     → Who's building VeinLegends
 ```
 
 ### 💬 COMMUNITY
@@ -53,7 +53,7 @@
 
 ### 💰 TOKEN
 ```
-#tokenomics               → Discussion on $MNLG design
+#tokenomics               → Discussion on $VEIN design
 #trading                  → Charts, market talk
 #burn-tracker             → Total burned (live)
 #governance               → DAO proposals, votes
@@ -120,7 +120,7 @@
 
 **Commands:**
 ```
-!balance              → Show $MNLG balance
+!balance              → Show $VEIN balance
 !characters           → List owned characters
 !mining               → Show mining status
 !claim                → Remind to claim (if available)
@@ -144,7 +144,7 @@
 **Purpose:** Auto-mod, welcome messages, level system
 
 **Settings:**
-- Welcome: "Welcome {user} to MineLegends! ⛏ Read #welcome to get started."
+- Welcome: "Welcome {user} to VeinLegends! ⛏ Read #welcome to get started."
 - Auto-mod: enabled (spam, profanity, link filtering)
 - Level rewards: tied to engagement (no pay-to-win)
 
@@ -152,9 +152,9 @@
 **Purpose:** Token-gated channels
 
 **Setup:**
-- Hold 100+ $MNLG → access #whale-chat
+- Hold 100+ $VEIN → access #whale-chat
 - Hold 1+ Legendary NFT → access #legendary-lounge
-- Hold 100K+ $MNLG → access #whale-lounge
+- Hold 100K+ $VEIN → access #whale-lounge
 
 ---
 
@@ -231,7 +231,7 @@
 ## Integrations
 
 ### Twitter/X
-- Auto-post #announcements to @minelegends
+- Auto-post #announcements to @veinlegends
 - Mirror milestones to #announcements
 
 ### GitHub

@@ -23,10 +23,10 @@ pub enum GameError {
     #[msg("You don't own this character")]
     NotCharacterOwner,
     
-    #[msg("Tournament entry fee too low (min 10 $MNLG)")]
+    #[msg("Tournament entry fee too low (min 10 $VEIN)")]
     EntryFeeTooLow,
     
-    #[msg("Tournament entry fee too high (max 1000 $MNLG)")]
+    #[msg("Tournament entry fee too high (max 1000 $VEIN)")]
     EntryFeeTooHigh,
     
     #[msg("Battle has already been settled")]

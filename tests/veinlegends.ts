@@ -3,9 +3,9 @@ import { Program } from "@coral-xyz/anchor";
 import { PublicKey, Keypair, SystemProgram, SYSVAR_RENT_PUBKEY } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID, createMint, getOrCreateAssociatedTokenAccount, mintTo, getAssociatedTokenAddress } from "@solana/spl-token";
 import { assert } from "chai";
-import { Minelegends } from "../target/types/minelegends";
+import { Minelegends } from "../target/types/veinlegends";
 
-describe("minelegends", () => {
+describe("veinlegends", () => {
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
@@ -107,7 +107,7 @@ describe("minelegends", () => {
       mint,
       userTokenAccount,
       wallet.payer,
-      10_000_000_000_000 // 10K $MNLG
+      10_000_000_000_000 // 10K $VEIN
     );
 
     const tx = await program.methods

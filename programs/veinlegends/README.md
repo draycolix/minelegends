@@ -1,4 +1,4 @@
-# MineLegends Anchor Program
+# VeinLegends Anchor Program
 
 **Status:** v0.1.0 (in development)
 **Network:** Solana (devnet → mainnet)
@@ -8,7 +8,7 @@
 ## What's Here
 
 ```
-programs/minelegends/
+programs/veinlegends/
 ├── Cargo.toml          # Rust dependencies
 └── src/
     ├── lib.rs          # Program entry + 6 instructions
@@ -22,10 +22,10 @@ programs/minelegends/
 
 1. **initialize** — One-time game state setup by admin
 2. **init_player** — Create player account (PDA per wallet)
-3. **mint_character** — Buy character NFT (burn 80% of $MNLG)
-4. **claim_mining** — Claim idle mining rewards (mints $MNLG)
-5. **upgrade_character** — Level up character (burn 60% of $MNLG)
-6. **enter_tournament** — Join tournament (burn 50% of $MNLG)
+3. **mint_character** — Buy character NFT (burn 80% of $VEIN)
+4. **claim_mining** — Claim idle mining rewards (mints $VEIN)
+5. **upgrade_character** — Level up character (burn 60% of $VEIN)
+6. **enter_tournament** — Join tournament (burn 50% of $VEIN)
 7. **settle_battle** — Auto-battle resolution (burn 10% to platform)
 
 ## State Accounts (5)
@@ -100,9 +100,9 @@ anchor test
 
 ## Token Economics (See TOKENOMICS.md)
 
-- Total Supply: 1B $MNLG (9 decimals)
+- Total Supply: 1B $VEIN (9 decimals)
 - Burn %: 50-100% per action (deflationary)
-- Mining rate: 10 $MNLG/hour base, decays 30%/quarter
+- Mining rate: 10 $VEIN/hour base, decays 30%/quarter
 - Daily mint limit: 3 characters per wallet
 - Max level: 50 (character), 100 (player)
 

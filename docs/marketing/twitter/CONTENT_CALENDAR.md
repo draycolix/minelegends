@@ -1,4 +1,4 @@
-# MineLegends Twitter/X Content Calendar
+# VeinLegends Twitter/X Content Calendar
 
 **Total posts:** 30 days of pre-launch content (Month 1-3 ramp up to testnet)
 **Posting cadence:** 1 thread/day (4-6 tweets) + 2-3 individual tweets + 5-10 replies
@@ -9,21 +9,21 @@
 
 ## Week 1: Origin Story (Build credibility)
 
-### Day 1: Why MineLegends
+### Day 1: Why VeinLegends
 **Thread (5 tweets):**
 1. "I spent 6 months building a Web3 game idea. Here's why I'm shipping it anyway (and why 95% of Web3 games fail). 🧵"
 2. "Most Web3 games die because: 1) Token inflation with no sinks 2) Boring gameplay 3) Ponzi mechanics 4) Regulatory risk"
-3. "MineLegends fixes all 4: 60% burn rate on every action, skill-based Gem Rush, deflationary by design, utility token (not security)"
-4. "Mine $MNLG → burn for character NFTs → battle PvP → earn more $MNLG. Simple, fun, sustainable."
+3. "VeinLegends fixes all 4: 60% burn rate on every action, skill-based Gem Rush, deflationary by design, utility token (not security)"
+4. "Mine $VEIN → burn for character NFTs → battle PvP → earn more $VEIN. Simple, fun, sustainable."
 5. "Building in public. 6-month roadmap. Testnet in 8 weeks. Follow along. ⛏"
 
-**Single tweets:** "Day 1 of building MineLegends. Whitepaper v1 published. Smart contract scaffolding starting tomorrow. ⛏ #Solana"
+**Single tweets:** "Day 1 of building VeinLegends. Whitepaper v1 published. Smart contract scaffolding starting tomorrow. ⛏ #Solana"
 
 ### Day 2: Problem deep-dive
 **Thread:** "Why 95% of Web3 games die in 6 months (and how to be in the 5%)"
 1. Stats on Web3 game failure rate
 2. Common reasons
-3. How MineLegends avoids each one
+3. How VeinLegends avoids each one
 4. The deflationary flywheel explained
 5. CTA to whitepaper
 
@@ -44,7 +44,7 @@
 5. CTA: whitepaper section
 
 ### Day 5: Tech stack
-**Thread:** "Building MineLegends on Solana (why I chose Solana over other L1s)"
+**Thread:** "Building VeinLegends on Solana (why I chose Solana over other L1s)"
 1. Speed (400ms blocks)
 2. Cost ($0.00025/tx)
 3. Ecosystem (Phantom, Jupiter, etc.)
@@ -102,7 +102,7 @@
 - "Which class would you main: Miner / Warrior / Mage / Engineer / Alchemist?"
 - "PvP should be: async auto-battle OR real-time?"
 - "Airdrop split: 50% testnet / 30% community / 20% KOLs?"
-- "Premium tier: $5/month OR pay with $MNLG?"
+- "Premium tier: $5/month OR pay with $VEIN?"
 
 ### Day 18-19: Live Q&A
 - "Ask me anything about the game / token / roadmap"
@@ -116,7 +116,7 @@
 ## Week 4: Soft Launch Prep
 
 ### Day 22: Testnet announcement
-**Thread:** "🚨 MineLegends testnet goes live in 7 days. Here's how to get on the list."
+**Thread:** "🚨 VeinLegends testnet goes live in 7 days. Here's how to get on the list."
 1. Sign-up link
 2. Airdrop criteria
 3. What to test
@@ -125,7 +125,7 @@
 
 ### Day 23: Testnet details
 **Thread:** "What you'll get for testing"
-1. Free test $MNLG
+1. Free test $VEIN
 2. 5 character classes
 3. PvP + tournaments
 4. Feedback channel
@@ -134,10 +134,10 @@
 ### Day 24-25: Onboarding guides
 - "How to install Phantom"
 - "How to connect to testnet"
-- "Your first 5 minutes in MineLegends"
+- "Your first 5 minutes in VeinLegends"
 
 ### Day 26: Testnet launch day
-**Thread:** "MineLegends testnet is LIVE 🎉"
+**Thread:** "VeinLegends testnet is LIVE 🎉"
 1. Live link
 2. Stats (current players)
 3. First feedback
@@ -157,10 +157,10 @@
 **Educational:**
 - "TIL: Solana can do 65,000 TPS but most dapps use <1% of capacity"
 - "Did you know 95% of Web3 games die in 6 months?"
-- "Fun fact: 60% of all MineLegends token activity is burned"
+- "Fun fact: 60% of all VeinLegends token activity is burned"
 
 **Build in public:**
-- "Day 23 of building MineLegends. Today: fixed a bug where the 5th character would crash the page. Testnet pushed."
+- "Day 23 of building VeinLegends. Today: fixed a bug where the 5th character would crash the page. Testnet pushed."
 - "Just deployed the battle settlement logic. Auto-battle is live. The math is brutal but fair."
 - "Migrated from OpenBook to Raydium. Save 0.001 SOL per swap. Small wins."
 
@@ -172,7 +172,7 @@
 **Meme/fun:**
 - "me: clicks once. also me: 30 minutes later, I have 47 legendary characters"
 - "Mining: the only legal way to lose money in 2026"
-- "POV: you bought 1000 $MNLG and now you're a whale"
+- "POV: you bought 1000 $VEIN and now you're a whale"
 
 ---
 
@@ -186,7 +186,7 @@
 - Game design threads (position as expert)
 
 **Reply template:**
-"[Agreeing or building on point] + [MineLegends context if relevant] + [link to blog/doc]"
+"[Agreeing or building on point] + [VeinLegends context if relevant] + [link to blog/doc]"
 
 **Avoid:**
 - Spammy "check out our project" replies
@@ -207,7 +207,7 @@
 ## Influencer Outreach Templates (10 KOLs)
 
 **Tier 1 (10K-100K followers, gaming/crypto):**
-"Hey [name], I'm building MineLegends, a deflationary Web3 idle RPG on Solana. Would love to get your feedback on the game design or tokenomics. Open to a quick chat or trial? No pressure, just respect your work."
+"Hey [name], I'm building VeinLegends, a deflationary Web3 idle RPG on Solana. Would love to get your feedback on the game design or tokenomics. Open to a quick chat or trial? No pressure, just respect your work."
 
 **Tier 2 (100K-1M, bigger reach):**
 "[name], love your recent thread on [topic]. We just published a similar take in our tokenomics — would you be interested in cross-posting? I'm not asking for promo, just curious if the angle resonates."
@@ -258,11 +258,11 @@ DM only if there's a hook. Generally wait for them to engage with content first.
 
 - "Day in the life of building a Web3 game"
 - "Token design mistakes I've made"
-- "Why I left my job to build MineLegends"
+- "Why I left my job to build VeinLegends"
 - "Solana vs Ethereum for gaming"
 - "The math behind the 60% burn rate"
 - "I tested 10 Web3 games so you don't have to"
 - "What I learned from my first game project"
 - "Behind the scenes: smart contract audit"
 - "How to design a deflationary token"
-- "MineLegends: 1 year retrospective"
+- "VeinLegends: 1 year retrospective"

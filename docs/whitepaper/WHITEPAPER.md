@@ -1,6 +1,6 @@
-# MineLegends Whitepaper v1.0
+# VeinLegends Whitepaper v1.0
 
-**Token:** $MNLG
+**Token:** $VEIN
 **Network:** Solana
 **Launch:** Q4 2026 (6-month roadmap)
 **Author:** Riz (draycolix) — https://github.com/draycolix
@@ -11,9 +11,9 @@
 
 ## 1. Executive Summary
 
-**MineLegends** is a Web3 idle-RPG game built on Solana where players mine the native $MNLG token through skill-based mini-games, burn tokens to acquire unique character NFTs, and battle other players in PvP arenas for token prizes. The game fuses tap-to-earn accessibility with play-to-earn depth, creating a self-sustaining token economy that rewards both casual players and competitive grinders.
+**VeinLegends** is a Web3 idle-RPG game built on Solana where players mine the native $VEIN token through skill-based mini-games, burn tokens to acquire unique character NFTs, and battle other players in PvP arenas for token prizes. The game fuses tap-to-earn accessibility with play-to-earn depth, creating a self-sustaining token economy that rewards both casual players and competitive grinders.
 
-Unlike most Web3 games that fail within 6 months, MineLegends is designed around a **deflationary token model** where every meaningful in-game action permanently reduces $MNLG supply. This creates a self-reinforcing flywheel: more players → more token burning → higher token value → more players.
+Unlike most Web3 games that fail within 6 months, VeinLegends is designed around a **deflationary token model** where every meaningful in-game action permanently reduces $VEIN supply. This creates a self-reinforcing flywheel: more players → more token burning → higher token value → more players.
 
 **Core metrics target (Year 1):**
 - 100,000 monthly active users (MAU)
@@ -51,33 +51,33 @@ Solana Mobile Stack exists (Saga/Seeker), but few games are optimized for it. Mo
 
 ### 2.4 "Buy to skip" alone isn't enough
 
-Many Web3 games let players buy tokens to skip grinding, but don't give tokens real utility beyond "buying stuff." MineLegends tokens have **multiple sinks** (characters, upgrades, tournaments, repair, governance) creating real demand.
+Many Web3 games let players buy tokens to skip grinding, but don't give tokens real utility beyond "buying stuff." VeinLegends tokens have **multiple sinks** (characters, upgrades, tournaments, repair, governance) creating real demand.
 
 ---
 
-## 3. Solution: MineLegends
+## 3. Solution: VeinLegends
 
 ### 3.1 The 4-Pillar Model
 
 **Pillar 1 — Skill-Based Mining**
-Players earn $MNLG by completing a daily mini-game (Gem Rush). Pure idle mining (without logging in) gives a base rate; active play multiplies it 2-5x. This prevents bot-only farming and rewards engagement.
+Players earn $VEIN by completing a daily mini-game (Gem Rush). Pure idle mining (without logging in) gives a base rate; active play multiplies it 2-5x. This prevents bot-only farming and rewards engagement.
 
 **Pillar 2 — NFT Character Roster**
 5 character classes (Miner, Warrior, Mage, Engineer, Alchemist), each with 3 rarity tiers. Characters are NFTs with on-chain stats. They can be leveled, equipped, and traded. Characters auto-mine when offline.
 
 **Pillar 3 — Competitive PvP Battle**
-Auto-battle PvP arena where players stake $MNLG to enter. Winner takes 90% of the pool. Tournament mode runs weekly with bigger prizes. Skill (character build + strategy) + stake size both matter.
+Auto-battle PvP arena where players stake $VEIN to enter. Winner takes 90% of the pool. Tournament mode runs weekly with bigger prizes. Skill (character build + strategy) + stake size both matter.
 
 **Pillar 4 — Deflationary Token Economy**
-60% of all $MNLG flowing through the game is **burned** (permanently removed from supply). This means successful games with high engagement will see circulating supply shrink, supporting token value.
+60% of all $VEIN flowing through the game is **burned** (permanently removed from supply). This means successful games with high engagement will see circulating supply shrink, supporting token value.
 
-### 3.2 Why $MNLG has intrinsic value
+### 3.2 Why $VEIN has intrinsic value
 
-Unlike pure meme tokens, $MNLG has **4 demand drivers**:
-1. **Buy characters** (1K-100K $MNLG per character)
-2. **Upgrade characters** (10-1000 $MNLG per upgrade)
-3. **Enter tournaments** (50-1000 $MNLG entry fee)
-4. **Repair equipment** (1-10 $MNLG per repair)
+Unlike pure meme tokens, $VEIN has **4 demand drivers**:
+1. **Buy characters** (1K-100K $VEIN per character)
+2. **Upgrade characters** (10-1000 $VEIN per upgrade)
+3. **Enter tournaments** (50-1000 $VEIN entry fee)
+4. **Repair equipment** (1-10 $VEIN per repair)
 
 These create constant buy pressure independent of speculation.
 
@@ -88,14 +88,14 @@ These create constant buy pressure independent of speculation.
 ### 4.1 Mining
 
 **Idle Mining:**
-- Base rate: 10 $MNLG per hour
+- Base rate: 10 $VEIN per hour
 - Multiplied by character Mining Power stat
 - Multiplied by player level
 - Decays 30% every 3 months (scarcity)
 
 **Active Mining (Gem Rush mini-game):**
 - 60-second puzzle/click challenge
-- Score-based reward: 10-50 $MNLG
+- Score-based reward: 10-50 $VEIN
 - Available every 4 hours
 - Bonus for streaks (consecutive daily play)
 
@@ -114,26 +114,26 @@ These create constant buy pressure independent of speculation.
 | **Alchemist** | Crafting, buffs | Potion brewing | Buff allies +25% mining |
 
 **Rarity:**
-- Common (60% supply) — 1,000 $MNLG
-- Rare (30% supply) — 10,000 $MNLG or lootbox drop
-- Legendary (10% supply) — 100,000 $MNLG or seasonal event
+- Common (60% supply) — 1,000 $VEIN
+- Rare (30% supply) — 10,000 $VEIN or lootbox drop
+- Legendary (10% supply) — 100,000 $VEIN or seasonal event
 
 ### 4.3 Battle System
 
 **PvP Arena (Auto-Battle):**
-- Stake $MNLG (10-1000 based on rank)
+- Stake $VEIN (10-1000 based on rank)
 - Match against similar stake tier
 - Outcome based on: character stats (50%) + random factor (30%) + mining stake (20%)
 - Winner: 90% of pool, 10% to treasury
 
 **PvE Dungeon:**
 - Solo run, 5 difficulty levels
-- Boss rewards: NFT lootbox, XP, $MNLG
-- Stamina cost: 10 $MNLG per attempt
+- Boss rewards: NFT lootbox, XP, $VEIN
+- Stamina cost: 10 $VEIN per attempt
 
 **Tournaments:**
 - Daily, weekly, monthly
-- Entry: 50-1000 $MNLG
+- Entry: 50-1000 $VEIN
 - Prize pool: 60% to top 3, 30% to top 10, 10% to top 100
 
 ### 4.4 Progression
@@ -155,11 +155,11 @@ These create constant buy pressure independent of speculation.
 
 ---
 
-## 5. Token Economy ($MNLG)
+## 5. Token Economy ($VEIN)
 
 ### 5.1 Supply & Distribution
 
-**Total Supply:** 1,000,000,000 $MNLG (1 billion)
+**Total Supply:** 1,000,000,000 $VEIN (1 billion)
 **Decimals:** 9 (SPL standard)
 **Initial Circulating (post-launch):** ~80M (8%)
 
@@ -202,13 +202,13 @@ Partnerships:   Per-agreement
 
 ### 5.4 Governance
 
-$MNLG holders can vote on:
+$VEIN holders can vote on:
 - New character classes
 - New battle modes
 - Economic parameter tweaks (within bounds)
 - Treasury allocation
 
-Voting power: 1 $MNLG = 1 vote, quadratic option available.
+Voting power: 1 $VEIN = 1 vote, quadratic option available.
 
 ---
 
@@ -228,7 +228,7 @@ Voting power: 1 $MNLG = 1 vote, quadratic option available.
 
 ### 6.2 Smart Contract Architecture
 
-**Program 1: Token ($MNLG)**
+**Program 1: Token ($VEIN)**
 - Standard SPL token with metadata
 - Mint authority burned post-launch (or DAO-controlled)
 
@@ -263,7 +263,7 @@ Voting power: 1 $MNLG = 1 vote, quadratic option available.
 ### Month 2: Testnet Alpha (Private)
 - Public testnet on devnet
 - Invite 100 beta testers from X/Discord
-- Airdrop test $MNLG (no real value)
+- Airdrop test $VEIN (no real value)
 - Iterate on UX based on feedback
 
 ### Month 3: Testnet Beta (Public)
@@ -333,9 +333,9 @@ Voting power: 1 $MNLG = 1 vote, quadratic option available.
 
 ## 10. Conclusion
 
-MineLegends is positioned to be the **first sustainable Web3 game on Solana** with a deflationary token model, skill-based mechanics, and real utility. The 6-month roadmap is aggressive but achievable with focused execution. The first 4 months prioritize product quality; the last 2 months focus on community and distribution.
+VeinLegends is positioned to be the **first sustainable Web3 game on Solana** with a deflationary token model, skill-based mechanics, and real utility. The 6-month roadmap is aggressive but achievable with focused execution. The first 4 months prioritize product quality; the last 2 months focus on community and distribution.
 
-Unlike 95% of Web3 games that fail, MineLegends has:
+Unlike 95% of Web3 games that fail, VeinLegends has:
 - A self-reinforcing economic flywheel (burn > emission if successful)
 - Multiple demand drivers for the token
 - Real gameplay depth (not just clicking)

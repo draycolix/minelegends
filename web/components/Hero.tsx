@@ -38,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg sm:text-xl text-dark-200 max-w-2xl mx-auto mb-10"
         >
-          A Web3 idle RPG on Solana. Mine the $MNLG token with skill,
+          A Web3 idle RPG on Solana. Mine the $VEIN token with skill,
           burn to mint legendary character NFTs, and battle other players
           for token prizes. Deflationary by design.
         </motion.p>
@@ -71,7 +71,7 @@ export default function Hero() {
           className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass glow-gold"
         >
           <span className="text-2xl">⛏</span>
-          <span className="font-mono text-xl font-bold">$MNLG</span>
+          <span className="font-mono text-xl font-bold">$VEIN</span>
           <span className="text-dark-300 text-sm">|</span>
           <span className="text-sm text-dark-200">Solana SPL Token</span>
         </motion.div>

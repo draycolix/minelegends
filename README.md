@@ -1,8 +1,8 @@
-# MineLegends ⛏
+# VeinLegends ⛏
 
 > **A Web3 idle RPG on Solana. Mine. Build. Battle. Earn.**
 
-Mine the $MNLG token with skill-based mini-games, burn tokens to mint legendary character NFTs, and battle other players in PvP arenas for token prizes. Deflationary by design — 60% of every in-game action permanently burns $MNLG.
+Mine the $VEIN token with skill-based mini-games, burn tokens to mint legendary character NFTs, and battle other players in PvP arenas for token prizes. Deflationary by design — 60% of every in-game action permanently burns $VEIN.
 
 **Status:** v0.1.0 — Pre-devnet scaffolding
 **TGE target:** Q4 2026
@@ -13,7 +13,7 @@ Mine the $MNLG token with skill-based mini-games, burn tokens to mint legendary 
 ## 📁 Repository Structure
 
 ```
-minelegends/
+veinlegends/
 ├── docs/                          # All documentation
 │   ├── whitepaper/WHITEPAPER.md  # Foundational narrative
 │   ├── tokenomics/TOKENOMICS.md  # Supply, distribution, burn
@@ -23,7 +23,7 @@ minelegends/
 │   └── airdrop/AIRDROP_PLAN.md   # Airdrop distribution plan
 │
 ├── programs/                      # Anchor smart contracts
-│   └── minelegends/
+│   └── veinlegends/
 │       ├── Cargo.toml            # Rust deps
 │       ├── src/
 │       │   ├── lib.rs            # 6 instructions
@@ -46,7 +46,7 @@ minelegends/
 │   └── README.md
 │
 ├── tests/
-│   └── minelegends.ts            # Anchor integration tests
+│   └── veinlegends.ts            # Anchor integration tests
 │
 ├── Anchor.toml                   # Anchor workspace config
 ├── Cargo.toml                    # Rust workspace
@@ -103,7 +103,7 @@ npm start
 | Doc | Purpose |
 |---|---|
 | [WHITEPAPER.md](./docs/whitepaper/WHITEPAPER.md) | Full whitepaper (12.4KB) |
-| [TOKENOMICS.md](./docs/tokenomics/TOKENOMICS.md) | $MNLG supply, burn, vesting |
+| [TOKENOMICS.md](./docs/tokenomics/TOKENOMICS.md) | $VEIN supply, burn, vesting |
 | [GDD.md](./docs/game-design/GDD.md) | Game design document (12.7KB) |
 | [ROADMAP.md](./docs/roadmap/ROADMAP.md) | 6-month plan |
 | [CONTENT_CALENDAR.md](./docs/marketing/twitter/CONTENT_CALENDAR.md) | 30-day X content |
@@ -115,7 +115,7 @@ npm start
 ## 🎮 Game Overview
 
 ### Core Loop
-> Mine $MNLG with skill → burn for character NFTs → battle PvP → win token pools → repeat
+> Mine $VEIN with skill → burn for character NFTs → battle PvP → win token pools → repeat
 
 ### 5 Character Classes
 - **Miner** — Pure mining, +50% auto-mine
@@ -125,9 +125,9 @@ npm start
 - **Alchemist** — Buffer, +25% ally mining
 
 ### 3 Rarities
-- **Common** (60%) — 1,000 $MNLG
-- **Rare** (30%) — 10,000 $MNLG
-- **Legendary** (10%) — 100,000 $MNLG
+- **Common** (60%) — 1,000 $VEIN
+- **Rare** (30%) — 10,000 $VEIN
+- **Legendary** (10%) — 100,000 $VEIN
 
 ### Game Modes
 - **Idle Mining** — Auto-mine while offline (cap 168h)
@@ -150,7 +150,7 @@ npm start
 | Advisors/KOLs | 5% | 6mo cliff + 2yr |
 | Partnerships | 5% | per agreement |
 
-**Total Supply:** 1,000,000,000 $MNLG
+**Total Supply:** 1,000,000,000 $VEIN
 **Decimals:** 9 (SPL standard)
 **Initial Circulating:** ~80M (8%)
 
@@ -195,7 +195,7 @@ npm start
 
 - **Code:** MIT
 - **Documentation:** CC BY-SA 4.0
-- **Token:** $MNLG is a utility token, not a security. Not financial advice.
+- **Token:** $VEIN is a utility token, not a security. Not financial advice.
 
 ---
 
@@ -224,4 +224,4 @@ After launch:
 
 ## ⚠️ Disclaimer
 
-MineLegends is in early development. Nothing here is financial advice. $MNLG is a utility token for use within the MineLegends game. It is not a security, investment, or profit-sharing instrument. Token value may go to zero. Play responsibly.
+VeinLegends is in early development. Nothing here is financial advice. $VEIN is a utility token for use within the VeinLegends game. It is not a security, investment, or profit-sharing instrument. Token value may go to zero. Play responsibly.

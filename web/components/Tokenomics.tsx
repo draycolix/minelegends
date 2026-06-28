@@ -13,12 +13,12 @@ const distribution = [
 ];
 
 const burnStats = [
-  { action: 'Character purchase', burn: 80, cost: '1K-100K $MNLG' },
-  { action: 'Character upgrade', burn: 60, cost: '10-1000 $MNLG' },
-  { action: 'Tournament entry', burn: 50, cost: '10-1000 $MNLG' },
-  { action: 'Repair equipment', burn: 100, cost: '1-10 $MNLG' },
+  { action: 'Character purchase', burn: 80, cost: '1K-100K $VEIN' },
+  { action: 'Character upgrade', burn: 60, cost: '10-1000 $VEIN' },
+  { action: 'Tournament entry', burn: 50, cost: '10-1000 $VEIN' },
+  { action: 'Repair equipment', burn: 100, cost: '1-10 $VEIN' },
   { action: 'Marketplace fee', burn: 100, cost: '2% of sale' },
-  { action: 'Respec stats', burn: 100, cost: '200 $MNLG' },
+  { action: 'Respec stats', burn: 100, cost: '200 $VEIN' },
 ];
 
 export default function Tokenomics() {
@@ -39,7 +39,7 @@ export default function Tokenomics() {
             Deflationary by <span className="text-shimmer">design</span>
           </h2>
           <p className="text-lg text-dark-200 max-w-2xl mx-auto">
-            1 billion $MNLG total supply. 60% of every in-game action permanently burns tokens.
+            1 billion $VEIN total supply. 60% of every in-game action permanently burns tokens.
             More players = less supply = more value.
           </p>
         </motion.div>
@@ -54,7 +54,7 @@ export default function Tokenomics() {
             className="glass rounded-2xl p-8"
           >
             <h3 className="font-display text-2xl font-bold mb-2">Token Distribution</h3>
-            <p className="text-sm text-dark-300 mb-6">Total supply: 1,000,000,000 $MNLG</p>
+            <p className="text-sm text-dark-300 mb-6">Total supply: 1,000,000,000 $VEIN</p>
 
             <div className="space-y-3">
               {distribution.map((item, i) => (

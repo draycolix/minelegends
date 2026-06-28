@@ -14,14 +14,14 @@ const features = [
     icon: '⚔',
     title: 'PvP Auto-Battle',
     description:
-      'Stake $MNLG, match against similar tier, winner takes 90% of the pot. Strategy + stats + a bit of luck. No real-time commitment.',
+      'Stake $VEIN, match against similar tier, winner takes 90% of the pot. Strategy + stats + a bit of luck. No real-time commitment.',
     accent: 'from-red-500/20 to-red-600/5',
   },
   {
     icon: '🏆',
     title: 'Tournament Seasons',
     description:
-      'Daily, weekly, monthly tournaments with $MNLG prize pools. Top 100 share. Top 3 get the lion\'s share. Glorious leaderboard.',
+      'Daily, weekly, monthly tournaments with $VEIN prize pools. Top 100 share. Top 3 get the lion\'s share. Glorious leaderboard.',
     accent: 'from-yellow-500/20 to-yellow-600/5',
   },
   {
@@ -35,7 +35,7 @@ const features = [
     icon: '🔥',
     title: 'Deflationary Token',
     description:
-      '60% of every in-game action burns $MNLG permanently. Successful games see circulating supply shrink, supporting token value.',
+      '60% of every in-game action burns $VEIN permanently. Successful games see circulating supply shrink, supporting token value.',
     accent: 'from-orange-500/20 to-orange-600/5',
   },
   {

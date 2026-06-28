@@ -21,19 +21,19 @@ export default function CTA() {
               Ready to <span className="text-shimmer">mine legends</span>?
             </h2>
             <p className="text-lg text-dark-200 max-w-xl mx-auto mb-8">
-              Join the testnet. Get a free airdrop of test $MNLG.
+              Join the testnet. Get a free airdrop of test $VEIN.
               Help shape the game. Get a share of the mainnet airdrop.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <a
-                href="https://discord.gg/minelegends"
+                href="https://discord.gg/veinlegends"
                 className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-dark-900 font-bold rounded-xl text-lg hover:from-primary-400 hover:to-primary-500 transition-all shadow-2xl shadow-primary-500/30"
               >
                 Join Testnet →
               </a>
               <a
-                href="https://x.com/minelegends"
+                href="https://x.com/veinlegends"
                 className="px-8 py-4 glass text-dark-100 font-semibold rounded-xl text-lg hover:bg-dark-700/50 transition-all"
               >
                 Follow on X

@@ -1,12 +1,12 @@
 [toolchain]
-anchor_version = "0.30.1"
+anchor_version = "0.31.0"
 
 [features]
 resolution = true
 skip-lint = false
 
 [programs.devnet]
-minelegends = "MNLG1111111111111111111111111111111111111111"
+veinlegends = "F4BZLJ42GzmBPv8iCqQ5kiNa3VVREjABdYadKCGDV9Y8"
 
 [registry]
 url = "https://api.apr.dev"
