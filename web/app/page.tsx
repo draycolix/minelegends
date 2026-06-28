@@ -8,6 +8,8 @@ import Tokenomics from '@/components/Tokenomics';
 import Gameplay from '@/components/Gameplay';
 import Roadmap from '@/components/Roadmap';
 import Characters from '@/components/Characters';
+import BreedSimulator from '@/components/BreedSimulator';
+import Lore from '@/components/Lore';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -21,7 +23,13 @@ export default function LandingPage() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-dark-900 flex items-center justify-center">
+        <div className="animate-pulse text-dark-400 text-lg">Loading VeinLegends...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -35,8 +43,10 @@ export default function LandingPage() {
       <main className="relative z-10">
         <Hero />
         <Stats />
+        <Lore />
         <Gameplay />
         <Characters />
+        <BreedSimulator />
         <Tokenomics />
         <Roadmap />
         <CTA />

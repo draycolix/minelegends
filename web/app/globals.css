@@ -103,3 +103,17 @@ body {
               linear-gradient(135deg, #f9bb20 0%, #10b981 100%) border-box;
   border: 1px solid transparent;
 }
+
+/* === Character Art Animations === */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-8px) rotate(5deg); opacity: 0.9; }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow gold for token ticker */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(249, 187, 32, 0.15), 0 0 40px rgba(249, 187, 32, 0.05);
+}

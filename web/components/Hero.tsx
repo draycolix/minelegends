@@ -68,12 +68,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass glow-gold"
+          className="inline-flex flex-wrap items-center justify-center gap-x-5 gap-y-2 px-6 py-3 rounded-full glass"
         >
-          <span className="text-2xl">⛏</span>
-          <span className="font-mono text-xl font-bold">$VEIN</span>
-          <span className="text-dark-300 text-sm">|</span>
-          <span className="text-sm text-dark-200">Solana SPL Token</span>
+          <span className="inline-flex items-center gap-2">
+            <span className="text-xl">⛏</span>
+            <span className="font-mono text-lg font-bold text-yellow-400">$VEIN</span>
+            <span className="text-dark-400 text-xs">Utility</span>
+          </span>
+          <span className="text-dark-500 text-sm">|</span>
+          <span className="inline-flex items-center gap-2">
+            <span className="text-xl">🏛</span>
+            <span className="font-mono text-lg font-bold text-purple-400">$VLS</span>
+            <span className="text-dark-400 text-xs">Governance</span>
+          </span>
         </motion.div>
 
         {/* Scroll indicator */}

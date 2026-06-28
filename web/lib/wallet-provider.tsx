@@ -1,37 +1,28 @@
 'use client';
 
-import { useMemo, useCallback } from 'react';
-import { ConnectionProvider, WalletProvider, useWallet, useConnection } from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
-import { clusterApiUrl } from '@solana/web3.js';
-import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import { type ReactNode } from 'react';
 
-require('@solana/wallet-adapter-react-ui/styles.css');
+// Lazy-load the ENTIRE wallet provider — avoids ESM module evaluation during SSR
+const WalletProviderInner = dynamic(
+  () => import('./wallet-provider-inner').then((mod) => mod.default),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="min-h-screen bg-dark-900 flex items-center justify-center">
+        <div className="animate-pulse text-dark-400 text-lg">Loading VeinLegends...</div>
+      </div>
+    ),
+  }
+);
 
-export function WalletContextProvider({ children }: { children: React.ReactNode }) {
-  const network = process.env.NEXT_PUBLIC_NETWORK === 'mainnet-beta' ? 'mainnet-beta' : 'devnet';
-  const endpoint = useMemo(() => {
-    if (process.env.NEXT_PUBLIC_RPC_URL) return process.env.NEXT_PUBLIC_RPC_URL;
-    return clusterApiUrl(network as any);
-  }, [network]);
-
-  const wallets = useMemo(
-    () => [new PhantomWalletAdapter(), new SolflareWalletAdapter({ network: network as any })],
-    [network]
-  );
-
-  return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>{children}</WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
-  );
+export function WalletContextProvider({ children }: { children: ReactNode }) {
+  return <WalletProviderInner>{children}</WalletProviderInner>;
 }
 
+// Re-export hook via lazy load
 export function useWalletConnection() {
-  const wallet = useWallet();
-  const { connection } = useConnection();
-  return { ...wallet, connection };
+  // This hook is never called during SSR (only from client components)
+  const { useWalletConnection: inner } = require('./wallet-provider-inner');
+  return inner();
 }

@@ -13,12 +13,14 @@ const distribution = [
 ];
 
 const burnStats = [
-  { action: 'Character purchase', burn: 80, cost: '1K-100K $VEIN' },
-  { action: 'Character upgrade', burn: 60, cost: '10-1000 $VEIN' },
-  { action: 'Tournament entry', burn: 50, cost: '10-1000 $VEIN' },
-  { action: 'Repair equipment', burn: 100, cost: '1-10 $VEIN' },
-  { action: 'Marketplace fee', burn: 100, cost: '2% of sale' },
-  { action: 'Respec stats', burn: 100, cost: '200 $VEIN' },
+  { action: 'Forge Character', burn: 80, cost: '1K-100K $VEIN' },
+  { action: 'Character Upgrade', burn: 60, cost: '10-50K $VEIN' },
+  { action: 'Tournament Entry', burn: 50, cost: '10-1K $VEIN' },
+  { action: 'PvP Battle Entry', burn: 50, cost: '10-1K $VEIN' },
+  { action: 'Breed Characters', burn: 25, cost: '1K-11K $VEIN' },
+  { action: 'Stamina Refill', burn: 100, cost: '10 $VEIN' },
+  { action: 'Marketplace Fee', burn: 100, cost: '2% of sale' },
+  { action: 'Custom Name', burn: 100, cost: '1K $VEIN' },
 ];
 
 export default function Tokenomics() {
@@ -36,15 +38,28 @@ export default function Tokenomics() {
             Tokenomics
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Deflationary by <span className="text-shimmer">design</span>
+            Dual-token <span className="text-shimmer">economy</span>
           </h2>
           <p className="text-lg text-dark-200 max-w-2xl mx-auto">
-            1 billion $VEIN total supply. 60% of every in-game action permanently burns tokens.
-            More players = less supply = more value.
+            $VEIN powers the game. $VLS governs the future. Deflationary by design —
+            60% of every in-game action permanently burns tokens.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        {/* ===== $VEIN Section ===== */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10"
+        >
+          <h3 className="font-display text-3xl font-bold">
+            <span className="text-yellow-400">⛏ $VEIN</span>{' '}
+            <span className="text-dark-300">— Utility Token</span>
+          </h3>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Distribution chart */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -53,8 +68,8 @@ export default function Tokenomics() {
             transition={{ duration: 0.6 }}
             className="glass rounded-2xl p-8"
           >
-            <h3 className="font-display text-2xl font-bold mb-2">Token Distribution</h3>
-            <p className="text-sm text-dark-300 mb-6">Total supply: 1,000,000,000 $VEIN</p>
+            <h4 className="font-display text-xl font-bold mb-2">Token Distribution</h4>
+            <p className="text-sm text-dark-300 mb-6">Total supply: 1,000,000,000 $VEIN (1B)</p>
 
             <div className="space-y-3">
               {distribution.map((item, i) => (
@@ -91,26 +106,28 @@ export default function Tokenomics() {
             transition={{ duration: 0.6 }}
             className="glass rounded-2xl p-8"
           >
-            <h3 className="font-display text-2xl font-bold mb-2">Burn Mechanisms</h3>
-            <p className="text-sm text-dark-300 mb-6">% of each action that gets burned</p>
+            <h4 className="font-display text-xl font-bold mb-2">Burn Mechanisms</h4>
+            <p className="text-sm text-dark-300 mb-6">
+              Every action burns — creating permanent deflationary pressure
+            </p>
 
-            <div className="space-y-3">
+            <div className="space-y-2">
               {burnStats.map((item, i) => (
                 <motion.div
                   key={item.action}
                   initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="flex items-center gap-4 p-3 rounded-lg bg-dark-800/50 hover:bg-dark-800 transition-colors"
+                  transition={{ duration: 0.4, delay: i * 0.04 }}
+                  className="flex items-center gap-3 p-2.5 rounded-lg bg-dark-800/50 hover:bg-dark-800 transition-colors"
                 >
                   <div className="flex-1">
                     <div className="text-sm font-medium text-dark-100">{item.action}</div>
                     <div className="text-xs text-dark-400">{item.cost}</div>
                   </div>
-                  <div className="text-right">
-                    <div className="font-bold text-red-400">{item.burn}%</div>
-                    <div className="text-xs text-dark-400">burned</div>
+                  <div className="text-right flex-shrink-0">
+                    <div className="font-bold text-red-400 text-sm">{item.burn}%</div>
+                    <div className="text-xs text-dark-500">burned</div>
                   </div>
                 </motion.div>
               ))}
@@ -118,20 +135,126 @@ export default function Tokenomics() {
           </motion.div>
         </div>
 
-        {/* Key metrics */}
-        <div className="grid sm:grid-cols-3 gap-4 mt-8">
-          <div className="glass rounded-2xl p-6 text-center">
-            <div className="text-3xl font-display font-bold text-primary-400">~80M</div>
-            <div className="text-sm text-dark-300 mt-1">Initial circulating supply</div>
-          </div>
-          <div className="glass rounded-2xl p-6 text-center">
-            <div className="text-3xl font-display font-bold text-secondary-400">60%</div>
-            <div className="text-sm text-dark-300 mt-1">Avg burn rate per action</div>
-          </div>
-          <div className="glass rounded-2xl p-6 text-center">
-            <div className="text-3xl font-display font-bold text-blue-400">9</div>
-            <div className="text-sm text-dark-300 mt-1">Token decimals (SPL)</div>
-          </div>
+        {/* $VEIN Key metrics */}
+        <div className="grid sm:grid-cols-4 gap-4 mb-16">
+          {[
+            { value: '~80M', label: 'Initial circulating', sub: '$VEIN' },
+            { value: '60%', label: 'Avg burn rate', sub: 'per action' },
+            { value: '50K', label: 'Target burn', sub: '6.25M $VEIN/mo at 50K MAU' },
+            { value: '9', label: 'Token decimals', sub: 'SPL standard' },
+          ].map((m) => (
+            <div key={m.label} className="glass rounded-2xl p-5 text-center">
+              <div className="text-2xl font-display font-bold text-yellow-400">{m.value}</div>
+              <div className="text-xs text-dark-300 mt-1">{m.label}</div>
+              <div className="text-xs text-dark-500">{m.sub}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* ===== $VLS Section ===== */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10"
+        >
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-primary-500 to-transparent mx-auto mb-6" />
+          <h3 className="font-display text-3xl font-bold">
+            <span className="text-purple-400">🏛 $VLS</span>{' '}
+            <span className="text-dark-300">— Governance Token</span>
+          </h3>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass rounded-2xl p-8 border border-purple-500/20"
+          >
+            <h4 className="font-display text-xl font-bold mb-4 text-purple-300">
+              🗳 What $VLS Controls
+            </h4>
+            <div className="space-y-4">
+              {[
+                {
+                  icon: '📜',
+                  title: 'Protocol Parameters',
+                  desc: 'Vote on burn rates, emission schedules, breeding costs, and tournament prize pools.',
+                },
+                {
+                  icon: '💰',
+                  title: 'Treasury Allocation',
+                  desc: 'Direct 200M $VEIN treasury — fund grants, partnerships, liquidity, and ecosystem growth.',
+                },
+                {
+                  icon: '🎮',
+                  title: 'Game Design Proposals',
+                  desc: 'New Bloodlines, seasonal events, arena modes — the DAO decides what gets built.',
+                },
+                {
+                  icon: '⚖',
+                  title: 'Dispute Resolution',
+                  desc: 'Community-governed moderation: bans, appeals, and marketplace arbitration.',
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="text-2xl flex-shrink-0">{item.icon}</div>
+                  <div>
+                    <div className="font-bold text-dark-100 text-sm">{item.title}</div>
+                    <div className="text-xs text-dark-400 mt-0.5">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass rounded-2xl p-8 border border-purple-500/20"
+          >
+            <h4 className="font-display text-xl font-bold mb-4 text-purple-300">
+              📊 $VLS Token Specs
+            </h4>
+            <div className="space-y-3">
+              {[
+                { label: 'Total Supply', value: '100,000,000 $VLS' },
+                { label: 'Network', value: 'Solana (SPL Token)' },
+                { label: 'Inflation', value: '2% / year via staking' },
+                { label: 'Earned By', value: 'PvP wins, tournaments, guild wars, liquidity providing' },
+                { label: 'Voting Power', value: '1 $VLS = 1 vote (quadratic for large proposals)' },
+                { label: 'Staking APR', value: 'Earn $VLS by staking in governance (target ~5-8%)' },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex justify-between items-center p-3 rounded-lg bg-dark-800/40"
+                >
+                  <span className="text-xs text-dark-300">{item.label}</span>
+                  <span className="text-xs font-mono font-bold text-purple-300 text-right ml-4">
+                    {item.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* $VLS metrics */}
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { value: '100M', label: 'Total $VLS Supply' },
+            { value: '2%', label: 'Annual inflation (staking)' },
+            { value: '1:1', label: 'Voting power per $VLS' },
+          ].map((m) => (
+            <div key={m.label} className="glass rounded-2xl p-5 text-center">
+              <div className="text-2xl font-display font-bold text-purple-400">{m.value}</div>
+              <div className="text-xs text-dark-300 mt-1">{m.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
