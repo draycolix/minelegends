@@ -170,13 +170,16 @@ export default function WhitepaperPage() {
               VeinLegends
             </h1>
             <p className="text-xl md:text-2xl text-dark-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              A Web3 idle-RPG on Solana. <span className="text-yellow-400">Mine</span> the $VEIN token,{' '}
-              <span className="text-yellow-400">burn</span> to mint legendary characters, and{' '}
+              A Web3 idle-RPG on Solana with a dual-token model.{' '}
+              <span className="text-yellow-400">Mine</span> the $VEIN utility token,{' '}
+              <span className="text-yellow-400">burn</span> to mint legendary characters, stake{' '}
+              <span className="text-purple-400">$VLS</span> for governance, and{' '}
               <span className="text-yellow-400">battle</span> for prizes.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-dark-400">
               <span className="glass px-4 py-2 rounded-full">Network: Solana</span>
-              <span className="glass px-4 py-2 rounded-full">Token: $VEIN</span>
+              <span className="glass px-4 py-2 rounded-full text-yellow-400">Token: $VEIN</span>
+              <span className="glass px-4 py-2 rounded-full text-purple-400">Token: $VLS</span>
               <span className="glass px-4 py-2 rounded-full">Launch: Q4 2026</span>
               <span className="glass px-4 py-2 rounded-full">Author: Riz (draycolix)</span>
             </div>

@@ -38,9 +38,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg sm:text-xl text-dark-200 max-w-2xl mx-auto mb-10"
         >
-          A Web3 idle RPG on Solana. Mine the $VEIN token with skill,
-          burn to mint legendary character NFTs, and battle other players
-          for token prizes. Deflationary by design.
+          A Web3 idle RPG on Solana. Dual-token economy: <span className="text-yellow-400 font-semibold">$VEIN</span> for utility 
+          + <span className="text-purple-400 font-semibold">$VLS</span> for governance. Mine, breed, battle, and earn.
         </motion.p>
 
         <motion.div
