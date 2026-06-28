@@ -7,7 +7,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const navLinks = [
   { label: 'Arena', href: '/arena' },
-  { label: 'Whitepaper', href: '/docs/WHITEPAPER.md' },
+  { label: 'Whitepaper', href: '/whitepaper' },
 ];
 
 export default function Navbar() {
