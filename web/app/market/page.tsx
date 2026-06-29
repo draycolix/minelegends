@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Navbar from '@/components/Navbar';
 
 // ============================================================
 // MOCK DATA
@@ -138,6 +139,7 @@ export default function MarketPage() {
 
   return (
     <div className="min-h-screen bg-dark-900 pt-24 pb-12">
+      <Navbar />
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

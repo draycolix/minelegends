@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Navbar from '@/components/Navbar';
 
 // ============================================================
 // TOKEN CONFIG
@@ -54,7 +55,9 @@ export default function SwapPage() {
   }
 
   return (
-    <div className="min-h-screen bg-dark-900 flex flex-col items-center justify-center px-4 py-24">
+    <div className="min-h-screen bg-dark-900">
+      <Navbar />
+      <div className="flex flex-col items-center justify-center px-4 pt-24 pb-12">
       {/* Back */}
       <div className="max-w-md w-full mb-6">
         <Link href="/" className="text-dark-400 hover:text-dark-200 text-sm">← Home</Link>
@@ -200,6 +203,7 @@ export default function SwapPage() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 }
