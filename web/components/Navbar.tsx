@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 import WalletButton from './WalletButton';
 
 const navLinks = [
-  { label: 'Mine', href: '/#mining' },
-  { label: 'Breed', href: '/#breed' },
+  { label: 'Mine', href: '/mining' },
+  { label: 'Breed', href: '/breed' },
   { label: 'Arena', href: '/arena' },
-  { label: 'Roadmap', href: '/#roadmap' },
+  { label: 'Roadmap', href: '/roadmap' },
   { label: 'Whitepaper', href: '/whitepaper' },
 ];
 
@@ -22,21 +22,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  function handleNav(href: string) {
-    setMobileMenu(false);
-    if (href.startsWith('/#')) {
-      const id = href.slice(2);
-      // If already on homepage, smooth scroll
-      if (window.location.pathname === '/') {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
-      // Navigate to homepage with hash
-      window.location.href = href;
-      return;
-    }
-  }
 
   return (
     <motion.nav
@@ -58,16 +43,16 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); handleNav(link.href); }}
-                className="text-sm font-medium text-dark-200 hover:text-primary-400 transition-colors cursor-pointer"
+                className="text-sm font-medium text-dark-200 hover:text-primary-400 transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -118,14 +103,14 @@ export default function Navbar() {
             className="md:hidden pb-4 space-y-2"
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); handleNav(link.href); }}
-                className="block px-3 py-2 text-dark-200 hover:text-primary-400 hover:bg-dark-800 rounded-md cursor-pointer"
+                onClick={() => setMobileMenu(false)}
+                className="block px-3 py-2 text-dark-200 hover:text-primary-400 hover:bg-dark-800 rounded-md"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="pt-2">
               <WalletButton />
