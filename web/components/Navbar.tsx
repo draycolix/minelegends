@@ -6,9 +6,12 @@ import { motion } from 'framer-motion';
 import WalletButton from './WalletButton';
 
 const navLinks = [
+  { label: 'Home', href: '/' },
   { label: 'Mine', href: '/mining' },
   { label: 'Breed', href: '/breed' },
   { label: 'Arena', href: '/arena' },
+  { label: 'Swap', href: '/swap' },
+  { label: 'Market', href: '/market' },
   { label: 'Roadmap', href: '/roadmap' },
   { label: 'Whitepaper', href: '/whitepaper' },
 ];
